@@ -155,12 +155,11 @@ header .navbar-default .navbar-nav>.open>a, header .navbar-default .navbar-nav>.
 }
 
 header .navbar {
-	min-height: 100px;
 }
 
 header .navbar-nav>li {
-	padding-bottom: 30px;
-	padding-top: 30px;
+	padding-bottom: 15px;
+	padding-top: 15px;
 }
 
 header  .navbar-nav>li>a {

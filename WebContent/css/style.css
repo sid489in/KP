@@ -115,9 +115,9 @@ header .navbar {
 }
 
 .navbar-brand {
-	color: #222;
+	color: #555 !important;
 	text-transform: uppercase;
-	font-size: 24px;
+	font-size: 26px;
 	font-weight: 700;
 	line-height: 1em;
 	letter-spacing: -1px;
@@ -155,6 +155,7 @@ header .navbar-default .navbar-nav>.open>a, header .navbar-default .navbar-nav>.
 }
 
 header .navbar {
+	
 }
 
 header .navbar-nav>li {
@@ -1500,7 +1501,7 @@ ul.time-post li.time {
 16. Footer
 ================================ */
 footer {
-	padding: 50px 0 0 0;
+	padding: 10px;
 	color: #f8f8f8;
 }
 
@@ -1538,7 +1539,7 @@ ul.social-network li {
 	text-shadow: none;
 	color: #f5f5f5;
 	padding: 0;
-	padding-top: 30px;
+	padding-top: 10px;
 	margin: 20px 0 0 0;
 }
 
@@ -1552,8 +1553,9 @@ ul.social-network li {
 }
 
 .copyright {
-	text-align: left;
+	text-align: right;
 	font-size: 12px;
+	width: 700px;
 }
 
 #sub-footer ul.social-network {
@@ -2074,13 +2076,14 @@ article img.pull-right, article .align-right {
 }
 
 .panel-heading a:after {
-    font-family:'FontAwesome';
-    content:"\f150";
-    float: right;
-    color: grey;
+	font-family: 'FontAwesome';
+	content: "\f150";
+	float: right;
+	color: grey;
 }
+
 .panel-heading a.collapsed:after {
-    content:"\f152";
+	content: "\f152";
 }
 
 /* table.dataTable thead th.sorting:after {
@@ -2098,70 +2101,107 @@ table.dataTable thead th.sorting_desc:after {
 
 /* --- header -- */
 .header_top {
-  background: none repeat scroll 0 0 #F0F0E9;
+	background: none repeat scroll 0 0 #F0F0E9;
 }
 
-.contactinfo ul li:first-child{
-    margin-left: -15px;
+.contactinfo ul li:first-child {
+	margin-left: -15px;
 }
 
-.contactinfo ul li a{
-  font-size: 12px;
-  color: #696763;
-  font-family: 'Roboto', sans-serif;
+.contactinfo ul li a {
+	font-size: 12px;
+	color: #696763;
+	font-family: 'Roboto', sans-serif;
 }
 
-
-.contactinfo ul li a:hover{
-	background:inherit;
+.contactinfo ul li a:hover {
+	background: inherit;
 }
-
 
 .social-icons ul li a {
-  border: 0 none;
-  border-radius: 0;
-  color: #696763;
-  padding:0px;
+	border: 0 none;
+	border-radius: 0;
+	color: #696763;
+	padding: 0px;
 }
 
-
-.social-icons ul li{
-	display:inline-block;
+.social-icons ul li {
+	display: inline-block;
 }
 
 .social-icons ul li a i {
-  padding: 11px 15px;
-   transition: all 0.9s ease 0s;
-  -moz-transition: all 0.9s ease 0s;
-  -webkit-transition: all 0.9s ease 0s;
-  -o-transition: all 0.9s ease 0s;
+	padding: 11px 15px;
+	transition: all 0.9s ease 0s;
+	-moz-transition: all 0.9s ease 0s;
+	-webkit-transition: all 0.9s ease 0s;
+	-o-transition: all 0.9s ease 0s;
 }
 
-.social-icons ul li a i:hover{
-  color: #fff;
-   transition: all 0.9s ease 0s;
-  -moz-transition: all 0.9s ease 0s;
-  -webkit-transition: all 0.9s ease 0s;
-  -o-transition: all 0.9s ease 0s;
+.social-icons ul li a i:hover {
+	color: #fff;
+	transition: all 0.9s ease 0s;
+	-moz-transition: all 0.9s ease 0s;
+	-webkit-transition: all 0.9s ease 0s;
+	-o-transition: all 0.9s ease 0s;
 }
-
 
 .fa-facebook:hover {
-  background: #0083C9;
+	background: #0083C9;
 }
 
-.fa-twitter:hover  {
-	background:#5BBCEC;
+.fa-twitter:hover {
+	background: #5BBCEC;
 }
 
-.fa-linkedin:hover  {
-	background:#FF4518;
+.fa-linkedin:hover {
+	background: #FF4518;
 }
 
-.fa-dribbble:hover  {
-	background:#90C9DC;
+.fa-dribbble:hover {
+	background: #90C9DC;
 }
 
-.fa-google-plus:hover  {
-	background:#CE3C2D;
+.fa-google-plus:hover {
+	background: #CE3C2D;
+}
+
+#footerwrap {
+	background-color: #68A4C4;
+	padding: 40px 0 30px 0;
+	text-align: center;
+	border-top: 1px solid #e6e6e6;
+}
+
+#footerwrap span.copyright {
+	color: #fff;
+	font-size: 16px;
+}
+
+#footerwrap span.copyright a {
+	color: #fff;
+	border-bottom: 1px dotted;
+}
+
+#footerwrap span.copyright a:hover {
+	color: #dc4a49;
+	text-decoration: none;
+}
+
+ul.social-buttons {
+	margin: 0;
+}
+
+ul.social-buttons li a {
+	font-size: 24px;
+	outline: 0;
+	color: #fff;
+}
+
+ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active
+	{
+	color: #0083C9;
+}
+
+ul.social-buttons li a:hover {
+	color: #fff;
 }

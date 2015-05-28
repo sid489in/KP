@@ -17,102 +17,77 @@
 
 <!-- Theme skin -->
 <link href="skins/default.css" rel="stylesheet" />
+<link href="css/navMenu.css" rel="stylesheet" />
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 <style>
-.contact {
-	padding: 30px 0;
+section#contact {
+	background-color: #fff;
+	text-align: center;
 }
 
-.contact .fa {
-	color: #dd4a49;
-}
-
-.contact p {
-	padding: 15px 0;
-}
-
-.contact p span {
-	color: #999;
-	margin-right: 5px;
-}
-
-.contact .btn {
-	font-size: 14px;
-	margin: 30px 0;
-	padding: 10px 20px;
-	background-color: #68A4C4;
-	color: #fff;
-	border: 0;
+section#contact .section-heading {
 	text-transform: uppercase;
-}
-
-.contact .btn:hover, .contact .btn:focus {
-	background-color: #bf3f3e;
-	outline: 0px;
-}
-
-.form_details input[type="text"], .form_details textarea {
-	padding: 10px;
-	width: 65%;
-	font-size: 1em;
-	margin: 10px 0px;
-	border: 1px solid #ccc;
-	color: #8A8888;
-	background: none;
-	-webkit-appearance: none;
-	float: left;
-	outline: none;
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 500;
+	color: #68A4C4;
 }
 
-.form_details textarea:hover {
-	border: 1px solid #777;
+section#contact .form-group {
+	margin-bottom: 25px;
 }
 
-.form_details input[type="text"]:hover {
-	border: 1px solid #777;
+section#contact .form-group input, section#contact .form-group textarea
+	{
+	padding: 15px;
 }
 
-.form_details textarea {
-	height: 100px;
-	resize: none;
-	width: 350px;
+section#contact .form-group input.form-control {
+	height: auto;
 }
 
-.form_details input[type="submit"] {
-	margin-top: 1em;
-	color: #fff;
-	font-size: 1.3em;
-	padding: 0.7em 1em;
-	-webkit-appearance: none;
+section#contact .form-group textarea.form-control {
+	height: 206px;
+}
+
+section#contact .form-control:focus {
+	border-color: #fed136;
+	box-shadow: none;
+}
+
+section#contact::-webkit-input-placeholder {
 	text-transform: uppercase;
-	display: inline-block;
-	-webkit-transition: all 0.3s ease-out;
-	-moz-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
-	font-weight: 600;
-	border: none;
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	color: #bbb;
+}
+
+section#contact:-moz-placeholder {
 	text-transform: uppercase;
-	outline: none;
-	cursor: pointer;
-	background: #9B80CD;
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	color: #bbb;
 }
 
-.form_details input[type="submit"]:hover {
-	text-decoration: none;
-	color: #fff;
-	background: #614084;
+section#contact::-moz-placeholder {
+	text-transform: uppercase;
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	color: #bbb;
 }
 
-address {
-	margin-top: 1em;
+section#contact:-ms-input-placeholder {
+	text-transform: uppercase;
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	color: #bbb;
 }
+
+section#contact .text-danger {
+	color: #e74c3c;
 }
 </style>
 </head>
@@ -152,7 +127,7 @@ address {
 				</div>
 			</div>
 			<!--/header_top-->
-			<div class="navbar navbar-default navbar-static-top">
+			<div class="navbar navbar-default">
 				<div class="container">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -163,12 +138,12 @@ address {
 						<a class="navbar-brand" href="index.html"><span>K</span>ripa <span>P</span>ower
 							<span>S</span>olutions</a>
 					</div>
-					<div class="navbar-collapse collapse ">
-						<ul class="nav navbar-nav">
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
 							<li><a href="index.html">Overview</a></li>
 							<li><a href="products.html">Products</a></li>
 							<li><a href="certificates.html">Certificates</a></li>
-							<li class="active"><a href="contact.html">Contact</a></li>
+							<li class="active"><a href="contact.html">Contact us</a></li>
 						</ul>
 					</div>
 				</div>
@@ -177,7 +152,7 @@ address {
 		<!-- end header -->
 		<section id="inner-headline">
 			<div class="container">
-				<div class="row">
+				<div class="row" style="margin-bottom: 10px;">
 					<div class="col-lg-12">
 						<ul class="breadcrumb">
 							<li><a href="#"><i class="fa fa-home"></i></a><i
@@ -188,54 +163,101 @@ address {
 				</div>
 			</div>
 		</section>
-		<div class="contact">
+
+		<section id="contact">
 			<div class="container">
-				<div class="col-md-6">
-					<h3>Contact Details</h3>
-					<p>
-						<span>Address :</span>No.18, Old Khata No. 24/1, First Floor, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next
-						To MaruthiTimber Traders, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Veerasandra
-						Konappana Agrahara Village,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Begur
-						Hobli, Hosur Main Road, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bangalore
-						- 560100, INDIA
-					</p>
-					<p>
-						<span>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
-						kripa.enquiry@yahoo.com
-					</p>
-					<p>
-						<span>Phone&nbsp;&nbsp;&nbsp;:</span> 080 32947794, 28520452,
-						67677909
-					</p>
-					<p>
-						<span>Fax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
-						41734681
-					</p>
-				</div>
-				<div class="col-md-6">
-					<h3>Get in Touch!</h3>
-					<form>
-						<div class="form_details">
-							<input type="text" class="text" value="Name"
-								onfocus="this.value = '';"
-								onblur="if (this.value == '') {this.value = 'Name';}"> <input
-								type="text" class="text" value="Email Address"
-								onfocus="this.value = '';"
-								onblur="if (this.value == '') {this.value = 'Email Address';}">
-							<input type="text" class="text" value="Mobile Number"
-								onfocus="this.value = '';"
-								onblur="if (this.value == '') {this.value = 'Mobile Number';}">
-							<textarea value="Address" onfocus="this.value = '';"
-								onblur="if (this.value == '') {this.value = 'Address';}">Address</textarea>
-							<textarea value="Requirement" onfocus="this.value = '';"
-								onblur="if (this.value == '') {this.value = 'Requirement';}">Requirement</textarea>
-							<div class="clearfix"></div>
-							<button class="btn" type="submit">Send Enquiry</button>
+				<div class="row" style="margin-bottom: 10px;">
+					<div class="row">
+						<div class="col-lg-12 text-center">
+							<h2 class="section-heading">FEEL FREE TO CONTACT US</h2>
 						</div>
-					</form>
+					</div>
+				</div>
+				<div class="row"
+					style="width: 50%; float: left; padding-left: 100px;">
+					<div>
+						<div
+							style="border: 1px solid #ccc; margin-left: 120px; margin-right: 20px;">
+							<h5>
+								<i class="fa fa-map-marker"></i> Address
+							</h5>
+							<p>No.18, Old Khata No. 24/1, First Floor,</p>
+							<p>Next To MaruthiTimber Traders,</p>
+							<p>Veerasandra Konappana, Agrahara Village,</p>
+							<p>Begur Hobli, Hosur Main Road,</p>
+							<p>Bangalore - 560100, INDIA</p>
+							<br>
+						</div>
+						<div
+							style="border: 1px solid #ccc; margin-left: 120px; margin-right: 20px;">
+							<h5>
+								<i class="fa fa-envelope-o"></i> Email
+							</h5>
+							<p>kripa.enquiry@yahoo.com,</p>
+							<p>kripatelecom@yahoo.com,</p>
+							<p>enquiry@kripalights.com,</p>
+							<br>
+						</div>
+						<div
+							style="border: 1px solid #ccc; margin-left: 120px; margin-right: 20px;">
+							<h5>
+								<i class="fa fa-phone"></i> Phone
+							</h5>
+							080 32947794, 28520452, 67677909
+						</div>
+					</div>
+				</div>
+				<div class="row"
+					style="width: 50%; float: left; padding-left: 50px;">
+					<div class="col-lg-12">
+						<form name="sentMessage" id="contactForm" novalidate>
+							<div class="row">
+								<div>
+									<div class="form-group" style="width: 400px;">
+										<input type="text" class="form-control"
+											placeholder="Your Name *" id="name" required
+											data-validation-required-message="Please enter your name.">
+										<p class="help-block text-danger"></p>
+									</div>
+									<div class="form-group" style="width: 400px;">
+										<input type="email" class="form-control"
+											placeholder="Your Email *" id="email" required
+											data-validation-required-message="Please enter your email address.">
+										<p class="help-block text-danger"></p>
+									</div>
+									<div class="form-group" style="width: 400px;">
+										<input type="tel" class="form-control"
+											placeholder="Your Phone *" id="phone" required
+											data-validation-required-message="Please enter your phone number.">
+										<p class="help-block text-danger"></p>
+									</div>
+									<div class="form-group">
+										<textarea class="form-control" placeholder="Your Address"
+											id="address" style="height: 105px; width: 400px;"></textarea>
+										<p class="help-block text-danger"></p>
+									</div>
+									<div class="form-group">
+										<textarea class="form-control"
+											placeholder="Your Requirement *" id="requirement" required
+											data-validation-required-message="Please specify your requirement"
+											style="height: 102px; width: 400px;"></textarea>
+										<p class="help-block text-danger"></p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="col-lg-12 text-center" style="margin-left: -17%;">
+									<div id="success"></div>
+									<button type="button" class="btn btn-info"
+										style="background: #68A4C4; width: 180px; font-size: 16px">
+										<i class="fa fa-paper-plane fa-1x">Send Message</i>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 		<!-- <section id="inner-headline">
 			<div class="container">
 				<div class="row">
@@ -308,7 +330,7 @@ address {
 				<div class="row">
 					<div class="col-md-8">
 						<span class="copyright">Copyright &copy; 2015 Kripa Power
-							Solutions.All rights reserved. </span>
+							Solutions. All rights reserved. </span>
 					</div>
 					<div class="col-md-4">
 						<ul class="list-inline social-buttons">

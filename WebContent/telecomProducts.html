@@ -18,12 +18,172 @@
 
 <!-- Theme skin -->
 <link href="skins/default.css" rel="stylesheet" />
+<link href="css/navMenu.css" rel="stylesheet" />
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+<style>
+.portfolio-modal .modal-content {
+	padding: 100px 0;
+	min-height: 100%;
+	border: 0;
+	border-radius: 0;
+	text-align: center;
+	background-clip: border-box;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
 
+.portfolio-modal .modal-content h2 {
+	margin-bottom: 15px;
+	font-size: 3em;
+}
+
+.portfolio-modal .modal-content p {
+	margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content p.item-intro {
+	margin: 20px 0 30px;
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
+	font-size: 16px;
+	font-style: italic;
+}
+
+.portfolio-modal .modal-content ul.list-inline {
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content img {
+	margin-bottom: 30px;
+}
+
+.portfolio-modal .close-modal {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	width: 75px;
+	height: 75px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+	opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+	z-index: 1051;
+	width: 1px;
+	height: 75px;
+	margin-left: 35px;
+	background-color: #222;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+	z-index: 1052;
+	width: 1px;
+	height: 75px;
+	background-color: #222;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+#portfolio .portfolio-item {
+	right: 0;
+	margin: 0 0 15px;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: rgba(0, 0, 7, .8);
+	-webkit-transition: all ease .5s;
+	-moz-transition: all ease .5s;
+	transition: all ease .5s;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+	opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content
+	{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	height: 20px;
+	margin-top: -12px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i
+	{
+	margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+	#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4
+	{
+	margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+	margin: 0 auto;
+	padding: 25px;
+	max-width: 400px;
+	text-align: center;
+	background-color: #dedede;
+	border-bottom: 1px solid #efefef;
+	height:20px;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+	margin: -10px;
+	text-transform: none;
+	font-size: 17px;
+	font-weight: 600;
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #68A4C4;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+	margin: 0;
+	font-size: 14px;
+	color: #666;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#portfolio * {
+	z-index: 2;
+	color: #fff;
+}
+
+@media ( min-width :767px) {
+	#portfolio .portfolio-item {
+		margin: 0 0 30px;
+	}
+}
+</style>
 </head>
 <body>
 	<div id="wrapper">
@@ -61,7 +221,7 @@
 				</div>
 			</div>
 			<!--/header_top-->
-			<div class="navbar navbar-default navbar-static-top">
+			<div class="navbar navbar-default">
 				<div class="container">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -72,12 +232,12 @@
 						<a class="navbar-brand" href="index.html"><span>K</span>ripa <span>P</span>ower
 							<span>S</span>olutions</a>
 					</div>
-					<div class="navbar-collapse collapse ">
-						<ul class="nav navbar-nav">
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
 							<li><a href="index.html">Overview</a></li>
 							<li class="active"><a href="products.html">Products</a></li>
 							<li><a href="certificates.html">Certificates</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="contact.html">Contact us</a></li>
 						</ul>
 					</div>
 				</div>
@@ -99,115 +259,136 @@
 				</div>
 			</div>
 		</section>
-		<section id="content">
+		<section id="portfolio" class="bg-light-gray">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">
-						<div class="clearfix"></div>
-						<div class="row">
-							<section id="projects">
-								<ul id="thumbs" class="portfolio">
-									<!-- Item Project and Filter Name -->
-									<li class="item-thumbs col-lg-3 design" data-id="id-0"
-										data-type="web" style="height: 250px;">
-										<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
-										class="hover-wrap fancybox" data-fancybox-group="gallery"
-										title="PIO	& Connectors" href="telecom/poi.html"> <span
-											class="overlay-img"></span> <span
-											class="overlay-img-thumb font-icon-plus"></span>
-									</a> <!-- Thumb Image and Description --> <img
-										src="img/telecom/poi_tile.jpg" alt="">
-									</li>
-									<!-- End Item Project -->
-									<!-- Item Project and Filter Name -->
-									<li class="item-thumbs col-lg-3 design" data-id="id-1"
-										data-type="icon" style="height: 250px;">
-										<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
-										class="hover-wrap fancybox" data-fancybox-group="gallery"
-										title="REPEATERS" href="telecom/repeater.html"> <span
-											class="overlay-img"></span> <span
-											class="overlay-img-thumb font-icon-plus"></span>
-									</a> <!-- Thumb Image and Description --> <img
-										src="img/telecom/rf-tile.jpg" alt="">
-									</li>
-									<!-- End Item Project -->
-									<!-- Item Project and Filter Name -->
-									<li class="item-thumbs col-lg-3 photography" data-id="id-2"
-										data-type="graphic" style="height: 250px;">
-										<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
-										class="hover-wrap fancybox" data-fancybox-group="gallery"
-										title="ANTENNA" href="telecom/antenna.html"> <span
-											class="overlay-img"></span> <span
-											class="overlay-img-thumb font-icon-plus"></span>
-									</a> <!-- Thumb Image and Description --> <img
-										src="img/telecom/a1-tile.jpg" alt="">
-									</li>
-									<!-- End Item Project -->
-									<!-- Item Project and Filter Name -->
-									<li class="item-thumbs col-lg-3 design" data-id="id-0"
-										data-type="web" style="height: 250px;">
-										<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
-										class="hover-wrap fancybox" data-fancybox-group="gallery"
-										title="CAVITY SPLITTER" href="telecom/cavitySplitter.html">
-											<span class="overlay-img"></span> <span
-											class="overlay-img-thumb font-icon-plus"></span>
-									</a> <!-- Thumb Image and Description --> <img
-										src="img/telecom/c1-tile.jpg" alt="">
-									</li>
-									<!-- End Item Project -->
-									<!-- Item Project and Filter Name -->
-									<li class="item-thumbs col-lg-3 photography" data-id="id-4"
-										data-type="web" style="height: 250px;">
-										<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
-										class="hover-wrap fancybox" data-fancybox-group="gallery"
-										title="FILTERS" href="telecom/filters.html"> <span
-											class="overlay-img"></span> <span
-											class="overlay-img-thumb font-icon-plus"></span>
-									</a> <!-- Thumb Image and Description --> <img
-										src="img/telecom/f1-tile.jpg" alt="">
-									</li>
-									<!-- End Item Project -->
-									<!-- Item Project and Filter Name -->
-									<li class="item-thumbs col-lg-3 photography" data-id="id-5"
-										data-type="icon" style="height: 250px;">
-										<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
-										class="hover-wrap fancybox" data-fancybox-group="gallery"
-										title="BTS ACCESSORIES" href="telecom/btsAccessories.html">
-											<span class="overlay-img"></span> <span
-											class="overlay-img-thumb font-icon-plus"></span>
-									</a> <!-- Thumb Image and Description --> <img
-										src="img/telecom/bts1-tile.jpg" alt="">
-									</li>
-									<!-- End Item Project -->
-									<li class="item-thumbs col-lg-3 design" data-id="id-0"
-										data-type="web" style="height: 250px;">
-										<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
-										class="hover-wrap fancybox" data-fancybox-group="gallery"
-										title="VSAT ANTENNA" href="telecom/vsatAntenna.html"> <span
-											class="overlay-img"></span> <span
-											class="overlay-img-thumb font-icon-plus"></span>
-									</a> <!-- Thumb Image and Description --> <img
-										src="img/telecom/vsat1-tile.jpg" alt="">
-									</li>
-									<!-- End Item Project -->
-									<!-- Item Project and Filter Name -->
-									<li class="item-thumbs col-lg-3 design" data-id="id-0"
-										data-type="graphic" style="height: 250px;">
-										<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
-										class="hover-wrap fancybox" data-fancybox-group="gallery"
-										title="RFID ANTENNA" href="telecom/rfidAntenna.html"> <span
-											class="overlay-img"></span> <span
-											class="overlay-img-thumb font-icon-plus"></span>
-									</a> <!-- Thumb Image and Description --> <img
-										src="img/telecom/rfIdAntenna.png" alt="">
-									</li>
-									<!-- End Item Project -->
-								</ul>
-							</section>
+				<div class="clearfix"></div>
+					<div class="col-md-4 col-sm-6 portfolio-item" style="height:250px;">
+						<a href="telecom/poi.html" class="portfolio-link"
+							data-toggle="modal" style="height:250px;">
+							<div class="portfolio-hover" style="height:250px;">
+								<div class="portfolio-hover-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div> <img src="img/telecom/poi.png" class="img-responsive"
+							alt="" style="height:250px;">
+						</a>
+						<div class="portfolio-caption">
+							<h4>POI & INTERCONNECT</h4>
+							<p class="text-muted"></p>
 						</div>
-
+					</div>
+					<div class="col-md-4 col-sm-6 portfolio-item" style="height:250px;">
+						<a href="telecom/repeater.html" class="portfolio-link"
+							data-toggle="modal">
+							<div class="portfolio-hover" style="height:250px;">
+								<div class="portfolio-hover-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div> <img src="img/telecom/rfRepeater.png" class="img-responsive"
+							alt="" style="height:250px;">
+						</a>
+						<div class="portfolio-caption">
+							<h4>RF REPEATERS</h4>
+							<p class="text-muted"></p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 portfolio-item" style="height:250px;">
+						<a href="telecom/antenna.html" class="portfolio-link"
+							data-toggle="modal" style="height:250px;">
+							<div class="portfolio-hover" style="height:250px;">
+								<div class="portfolio-hover-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div> <img src="img/telecom/antenna.png" class="img-responsive"
+							alt="" style="height:250px;">
+						</a>
+						<div class="portfolio-caption">
+							<h4>ANTENNAS</h4>
+							<p class="text-muted"></p>
+						</div>
+					</div>
+					</div>
+					<div class="row">
+					<div class="col-md-4 col-sm-6 portfolio-item" style="height:250px;">
+						<a href="telecom/cavitySplitter.html" class="portfolio-link"
+							data-toggle="modal">
+							<div class="portfolio-hover" style="height:250px;">
+								<div class="portfolio-hover-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div> <img src="img/telecom/cavitySplitter.png" class="img-responsive"
+							alt="" style="height:250px;">
+						</a>
+						<div class="portfolio-caption">
+							<h4>CAVITY SPLITTER</h4>
+							<p class="text-muted"></p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 portfolio-item" style="height:250px;">
+						<a href="telecom/filters.html" class="portfolio-link"
+							data-toggle="modal">
+							<div class="portfolio-hover" style="height:250px;">
+								<div class="portfolio-hover-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div> <img src="img/telecom/filters.png" class="img-responsive"
+							alt="" style="height:250px;">
+						</a>
+						<div class="portfolio-caption">
+							<h4>FILTERS</h4>
+							<p class="text-muted"></p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 portfolio-item" style="height:250px;">
+						<a href="telecom/btsAccessories.html" class="portfolio-link"
+							data-toggle="modal">
+							<div class="portfolio-hover" style="height:250px;">
+								<div class="portfolio-hover-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div> <img src="img/telecom/btsAccessories.png" class="img-responsive"
+							alt="" style="height:250px;">
+						</a>
+						<div class="portfolio-caption">
+							<h4>BTS ACCESSORIES</h4>
+							<p class="text-muted"></p>
+						</div>
+					</div>
+					</div>
+					<div class="row">
+					<div class="col-md-4 col-sm-6 portfolio-item" style="height:250px;">
+						<a href="telecom/vsatAntenna.html" class="portfolio-link"
+							data-toggle="modal">
+							<div class="portfolio-hover" style="height:250px;">
+								<div class="portfolio-hover-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div> <img src="img/telecom/vsatAntenna.png" class="img-responsive"
+							alt="" style="height:250px;">
+						</a>
+						<div class="portfolio-caption">
+							<h4>VSAT ANTENNA</h4>
+							<p class="text-muted"></p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 portfolio-item" style="height:250px;">
+						<a href="telecom/rfidAntenna.html" class="portfolio-link"
+							data-toggle="modal">
+							<div class="portfolio-hover" style="height:250px;">
+								<div class="portfolio-hover-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div> <img src="img/telecom/rfIdAntenna.png" class="img-responsive"
+							alt="" style="height:250px;">
+						</a>
+						<div class="portfolio-caption">
+							<h4>RFID ANTENNA</h4>
+							<p class="text-muted"></p>
+						</div>
 					</div>
 				</div>
+
 			</div>
 		</section>
 		<div id="footerwrap">
@@ -215,7 +396,7 @@
 				<div class="row">
 					<div class="col-md-8">
 						<span class="copyright">Copyright &copy; 2015 Kripa Power
-							Solutions.All rights reserved. </span>
+							Solutions. All rights reserved. </span>
 					</div>
 					<div class="col-md-4">
 						<ul class="list-inline social-buttons">

@@ -1,0 +1,60 @@
+.navbar-default {
+	padding: 30px 0 15px 0;
+}
+
+.navbar-default .navbar-brand {
+	color: #555 !important;
+	text-transform: uppercase;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1em;
+	letter-spacing: -1px;
+	margin-top: 30px;
+	padding: 0 0 0 15px;
+}
+
+.navbar-header {
+	margin-top: -20px;
+	border-bottom: none;
+}
+
+.navbar-default .navbar-brand .fa {
+	color: #68A4C4;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus
+	{
+	color: #5e5e5e;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav {
+	
+}
+
+.navbar-default .navbar-nav>li {
+	padding: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	text-decoration: none;
+	font-size: 14px;
+	margin: 0 5px;
+	color: #111;
+	font-weight: 600;
+	padding: 7px 14px;
+	border-radius: 4px;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>.active>a:hover
+	{
+	color: #eee;
+	border-bottom: 1px solid #822a2a;
+	background-color: #68A4C4;
+}
+
+.navbar-default .navbar-nav>.active>a {
+	border-bottom: 1px solid #bbb;
+	background-color: #eee;
+	color: #68A4C4;
+}

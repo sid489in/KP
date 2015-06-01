@@ -114,17 +114,6 @@ header .navbar {
 	border: none;
 }
 
-.navbar-brand {
-	color: #555 !important;
-	text-transform: uppercase;
-	font-size: 26px;
-	font-weight: 700;
-	line-height: 1em;
-	letter-spacing: -1px;
-	margin-top: 30px;
-	padding: 0 0 0 15px;
-}
-
 header .navbar-collapse  ul.navbar-nav {
 	float: right;
 	margin-right: 0;
@@ -330,7 +319,7 @@ select.selectmenu {
 
 .flex-caption {
 	bottom: 35px;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.66);
 	color: #fff;
 	margin: 0;
 	padding: 25px 25px 25px 30px;
@@ -355,7 +344,6 @@ select.selectmenu {
 ==================================== */
 section.callaction {
 	background: #f9f9f9;
-	padding: 50px 0 0 0;
 }
 
 /* ===================================
@@ -2231,22 +2219,28 @@ ul.social-buttons li a:hover {
 
 #col1{
 	float:left;
-	width:40%;
-	padding-left:7%;
-	padding-right:5%;
+	width:26%;
+	padding-right:3%;
 	text-align: justify;
 }
 
 #col2{
 	float:left;
-	width:30%;
-	padding-right:5%;
+	width:26%;
+	padding-right:3%;
 	text-align: justify;
 }
 
 #col3{
 	float:left;
-	width:30%;
-	padding-right:7%;
+	width:26%;
+	padding-right:2%;
 	text-align: justify;
+}
+
+#col4{
+	float:right;
+	width:22%;
 }	
+
+

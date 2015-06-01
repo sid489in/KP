@@ -119,7 +119,7 @@
 							</div>
 							<div id="collapseOne" class="panel-collapse collapse in">
 								<div class="panel-body">
-									<table id="patchPanelTbl" class="display" cellspacing="0"
+									<table id="duplexerTable" class="display" cellspacing="0"
 										width="100%">
 										<thead>
 											<tr>
@@ -141,30 +141,30 @@
 							</div>
 						</div>
 
-				<!-- 		<div class="panel panel-default" id="panel2"
+						<div class="panel panel-default" id="panel2"
 							style="color: #31708f; background-color: #d9edf7; border-color: #bce8f1;">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a data-toggle="collapse" data-target="#collapseTwo"
-										href="#collapseTwo" class="collapsed"> WIDE BAND COMBINER
+										href="#collapseTwo" class="collapsed"> BAND PASS FILTER
 									</a>
 								</h4>
 							</div>
 							<div id="collapseTwo" class="panel-collapse collapse">
 								<div class="panel-body">
-									<table id="wideBandTbl"
+									<table id="bandPassFilterTable"
 										class="table table-striped table-bordered" cellspacing="0"
 										width="100%">
 										<thead>
 											<tr>
-												<th>PARAMETER</th>
-												<th>FREQUENCY RANGE (MHz)</th>
+												<th>Parameter</th>
+												<th>Frequency Range (MHz)</th>
 												<th>VSWR</th>
-												<th>NO. PORTS (ANT)</th>
-												<th>INSERTION LOSS</th>
-												<th>SPLIT LOSS</th>
-												<th>POWER HANDLING (Watt)</th>
-												<th>INDEPENDENCE (Ohms)</th>
+												<th>No. Ports (ANT)</th>
+												<th>Insertion Loss</th>
+												<th>Isolation</th>
+												<th>Power Handling (Watt)</th>
+												<th>Inpedance (Ohms)</th>
 												<th>Connector</th>
 											</tr>
 										</thead>
@@ -180,24 +180,25 @@
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a data-toggle="collapse" data-target="#collapseThree"
-										href="#collapseThree" class="collapsed"> FILTER TYPE
-										COMBINER </a>
+										href="#collapseTwo" class="collapsed"> LC FILTERS (Low Pass & High Pass)
+									</a>
 								</h4>
 							</div>
 							<div id="collapseThree" class="panel-collapse collapse">
 								<div class="panel-body">
-									<table id="filterTypeTbl"
+									<table id="lcFilterTable"
 										class="table table-striped table-bordered" cellspacing="0"
 										width="100%">
 										<thead>
 											<tr>
-												<th>PARAMETER</th>
-												<th>FREQUENCY RANGE (MHz)</th>
+												<th>Parameter</th>
+												<th>Frequency Range (MHz)</th>
 												<th>VSWR</th>
-												<th>NO. PORTS (ANT)</th>
-												<th>INSERTION LOSS</th>
-												<th>POWER HANDLING (Watt)</th>
-												<th>INDEPENDENCE (Ohms)</th>
+												<th>No. Ports (ANT)</th>
+												<th>Insertion Loss</th>
+												<th>Isolation</th>
+												<th>Power Handling (Watt)</th>
+												<th>Inpedance (Ohms)</th>
 												<th>Connector</th>
 											</tr>
 										</thead>
@@ -205,10 +206,11 @@
 										</tbody>
 									</table>
 								</div>
-							</div> -->
+							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 		</section>
 		<div id="footerwrap">
 			<div class="container">
@@ -246,6 +248,6 @@
 	<script src="../js/jquery.flexslider.js"></script>
 	<script src="../js/animate.js"></script>
 	<script src="../js/custom.js"></script>
-	<script src="../js/app/telecom.js"></script>
+	<script src="../js/app/filters.js"></script>
 </body>
 </html>

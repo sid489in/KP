@@ -174,13 +174,13 @@ $(document).ready(
 				"connector" : "N female",
 				"Dimension (mm)" : "900 X 200"
 			} ]
-			poiTable.fnClearTable();
+			patchPanelTable.fnClearTable();
 			yagiTable.fnClearTable();
 			ceilingTable.fnClearTable();
 
 			for (var i = 0; i < patchPanelData.length; i++) {
 				var data = patchPanelData[i];
-				poiTable.fnAddData([ data.parameter, data.frequency, data.gain,
+				patchPanelTable.fnAddData([ data.parameter, data.frequency, data.gain,
 						data.vswr, data.polarization, data.fbRatio,
 						data.powerHandling, data.hpbwHorizontal,
 						data.hpbwVertical, data.impedence, data.connector,

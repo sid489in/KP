@@ -57,44 +57,51 @@
 	width: 51px;
 	height: 27px;
 	display: inline-block;
-	border:1px solid #fff;
-	background:#fff;
+	border: 1px solid #fff;
+	background: #fff;
 }
-.callbacks_here a:after{
+
+.callbacks_here a:after {
 	border: 1px solid #F7F0F0;
-	background:#EC5844;
+	background: #EC5844;
 }
-.callbacks_tabs a{
-	visibility:hidden;
+
+.callbacks_tabs a {
+	visibility: hidden;
 }
-.callbacks_tabs li{
-	display:inline-block;
+
+.callbacks_tabs li {
+	display: inline-block;
 }
+
 ul.callbacks_tabs.callbacks1_tabs {
-position:absolute;
+	position: absolute;
 	bottom: 7.3%;
 	z-index: 999;
 	left: -76%;
 	display: block;
 }
+
 .callbacks_nav {
-  position: absolute;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  top: 73%;
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	top: 73%;
 	left: 15%;
-  opacity: 0.7;
-  z-index: 3;
-  background: transparent url("img/gif.png") no-repeat 0px 0px;
-  margin-top: -45px;
-  display:none;
-  }
+	opacity: 0.7;
+	z-index: 999;
+	background: transparent url("img/gif.png") no-repeat 0px 0px;
+	margin-top: -45px;
+	display: none;
+}
+
 .callbacks_nav.next {
-  left: auto;
-  background-position: right top;
-  right: 15%;
- }
+	left: auto;
+	background-position: right top;
+	right: 15%;
+}
+
 .slider-bg {
-	background: url("img/bg.jpg") no-repeat 0px 0px;
+	background: url("img/bg3.jpg") no-repeat 0px 0px;
 	padding: 1em 0 0 0;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -330,6 +337,46 @@ position:absolute;
 .box {
 	margin: 5px 0px;
 }
+
+/*--flexisel--*/
+#flexiselDemo1 {
+	display: none;
+}
+
+.nbs-flexisel-container {
+	position: relative;
+	max-width: 100%;
+}
+
+.nbs-flexisel-ul {
+	position: relative;
+	width: 9999px;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	text-align: center;
+}
+
+.nbs-flexisel-inner {
+	overflow: hidden;
+	padding: 30px 0 80px 0;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.nbs-flexisel-item {
+	float: left;
+	margin: 0;
+	padding: 0px;
+	cursor: pointer;
+	position: relative;
+	line-height: 0px;
+}
+
+.nbs-flexisel-item>img {
+	cursor: pointer;
+	position: relative;
+}
 </style>
 <script src="js/wow.min.js"></script>
 <script>
@@ -400,15 +447,14 @@ position:absolute;
 			<div class="container">
 				<div class="grid-1">
 					<div class="col-md-5 left-grid-1 wow bounceInLeft"
-						data-wow-delay="0.4s">
-					</div>
+						data-wow-delay="0.4s"></div>
 					<div class="col-md-7 right-grid-1 wow bounceInRight"
 						data-wow-delay="0.7s">
 						<div class="slider">
 							<div class="callbacks_container">
-								<ul class="rslides" id="slider">
+								<ul class="rslides" id="slider" style="z-index: 999">
 									<li><img src="img/slides/light.gif" class="img-responsive"
-										alt="" /></li>
+										alt="" style="z-index: 999" /></li>
 									<li><img src="img/slides/solarwind.gif"
 										class="img-responsive" alt="" /></li>
 									<li><img src="img/slides/solarpanel.gif"
@@ -522,6 +568,59 @@ position:absolute;
 							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="box">
+							<div class="left-box" style="width: 100%">
+								<h3 style="text-align: center">SOME OF OUR CLIENTS</h3>
+								<div class="clients-grids">
+									<ul id="flexiselDemo1">
+										<li style="padding: 5px;">
+											<div class="client-grid text-center">
+												<img src="img/clients/tvs.jpg" alt="" style="height: 100px;" />
+											</div>
+										</li>
+										<li style="padding: 5px;">
+											<div class="client-grid text-center">
+												<img src="img/clients/indianRailway.png" alt=""
+													style="height: 100px;" />
+											</div>
+										</li>
+										<li style="padding: 5px;">
+											<div class="client-grid text-center">
+												<img src="img/clients/isra.png" alt=""
+													style="height: 100px;" />
+											</div>
+										</li>
+										<li style="padding: 5px;">
+											<div class="client-grid text-center">
+												<img src="img/clients/kredl.jpg" alt=""
+													style="height: 100px;" />
+											</div>
+										</li>
+										<li style="padding: 5px;">
+											<div class="client-grid text-center">
+												<img src="img/clients/Hal.png" alt=""
+													style="height: 100px;" />
+											</div>
+										</li>
+										<li style="padding: 5px;">
+											<div class="client-grid text-center">
+												<img src="img/clients/manipalPicture.jpg" alt=""
+													style="height: 100px;" />
+											</div>
+										</li>
+										<li style="padding: 5px;">
+											<div class="client-grid text-center">
+												<img src="img/clients/bmtc.jpg" alt=""
+													style="height: 100px;" />
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<!-- <!-- <div class="row">
 						<div class="wow zoomIn col-lg-12 animated">
 							<div class="container1">
@@ -736,15 +835,43 @@ position:absolute;
 	</script>
 	<script src="js/responsiveslides.min.js"></script>
 	<script>
-								$(function() {
-									$("#slider").responsiveSlides({
-										auto : true,
-										nav : true,
-										speed : 500,
-										namespace : "callbacks",
-										pager : true,
-									});
-								});
-							</script>
+		$(function() {
+			$("#slider").responsiveSlides({
+				auto : true,
+				nav : true,
+				speed : 500,
+				namespace : "callbacks",
+				pager : true,
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(window).load(function() {
+			$("#flexiselDemo1").flexisel({
+				visibleItems : 5,
+				animationSpeed : 1000,
+				autoPlay : true,
+				autoPlaySpeed : 3000,
+				pauseOnHover : true,
+				enableResponsiveBreakpoints : true,
+				responsiveBreakpoints : {
+					portrait : {
+						changePoint : 320,
+						visibleItems : 1
+					},
+					landscape : {
+						changePoint : 640,
+						visibleItems : 2
+					},
+					tablet : {
+						changePoint : 768,
+						visibleItems : 3
+					}
+				}
+			});
+
+		});
+	</script>
+	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
 </body>
 </html>

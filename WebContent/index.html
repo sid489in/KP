@@ -10,13 +10,331 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/datatables.bootstrap.css" rel="stylesheet">
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
+<link href="css/animate.css" rel="stylesheet" />
 
 <!-- Theme skin -->
 <link href="skins/default.css" rel="stylesheet" />
 <link href="css/navMenu.css" rel="stylesheet" />
+<link href="css/slider.css" rel="stylesheet" />
+<style>
+/*--- slider---*/
+.slider {
+	position: relative;
+	text-align: center;
+}
 
+.rslides {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.rslides li {
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.rslides li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.callbacks_tabs a:after {
+	content: "\f111";
+	font-size: 0;
+	font-family: FontAwesome;
+	visibility: visible;
+	display: block;
+	width: 51px;
+	height: 27px;
+	display: inline-block;
+	border:1px solid #fff;
+	background:#fff;
+}
+.callbacks_here a:after{
+	border: 1px solid #F7F0F0;
+	background:#EC5844;
+}
+.callbacks_tabs a{
+	visibility:hidden;
+}
+.callbacks_tabs li{
+	display:inline-block;
+}
+ul.callbacks_tabs.callbacks1_tabs {
+position:absolute;
+	bottom: 7.3%;
+	z-index: 999;
+	left: -76%;
+	display: block;
+}
+.callbacks_nav {
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 73%;
+	left: 15%;
+  opacity: 0.7;
+  z-index: 3;
+  background: transparent url("img/gif.png") no-repeat 0px 0px;
+  margin-top: -45px;
+  display:none;
+  }
+.callbacks_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 15%;
+ }
+.slider-bg {
+	background: url("img/bg.jpg") no-repeat 0px 0px;
+	padding: 1em 0 0 0;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o- background-size: cover;
+	-moz- background-size: cover;
+	height: 400px;
+}
+
+.left-grid-1 {
+	margin-top: 1em;
+	float: left;
+}
+
+.right-grid-1 {
+	float: right;
+}
+
+.left-grid-1 h1, .left-grid-1 h2, .left-grid-1 h3 {
+	color: #fff;
+	background: #EC5844;
+	padding: 0.2em 0.2em;
+	width: 71%;
+	font-size: 2em;
+	border-bottom: 1px solid #fff;
+	font-family: 'Oswald', sans-serif;
+}
+
+.left-grid-1 h2 {
+	width: 60%;
+	font-size: 2em;
+	border: none;
+}
+
+.left-grid-1 h3 {
+	border-top: 1px solid #fff;
+	border-bottom: none;
+}
+
+.left-box {
+	width: 900px;
+	float: left;
+	padding: 10px;
+	border: 1px solid #eee;
+	background: #FFF;
+}
+
+/*---content----*/
+/*  GRID OF THREE   ============================================================================= */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.group:before, .group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	zoom: 1;
+}
+
+.grid_1_of_3 {
+	display: block;
+	float: left;
+	margin: 1% 0 1% 1.6%;
+	border: 1px solid #eee;
+}
+
+.grid_1_of_3:first-child {
+	margin-left: 0;
+}
+
+.images_1_of_3 {
+	width: 32.0%;
+	padding: 1.5%;
+	background: #FFF;
+}
+
+.images_1_of_3  img {
+	max-width: 100%;
+	display: block;
+	-webkit-filter: grayscale(100%);
+	opacity: 0.99;
+	transition: all 300ms !important;
+	-webkit-transition: all 300ms !important;
+	-moz-transition: all 300ms !important;
+}
+
+.images_1_of_3  img:hover {
+	opacity: 1;
+	-webkit-filter: grayscale(0%);
+	cursor: pointer;
+}
+
+.images_1_of_3:hover img {
+	opacity: 1;
+	-webkit-filter: grayscale(0%);
+	cursor: pointer;
+}
+
+.images_1_of_3  h3 {
+	font-family: 'Karla', sans-serif;
+	color: #613854;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 1.6em;
+	padding: 0px 0px 10px 0px;
+}
+
+.images_1_of_3  p {
+	font-size: 0.8125em;
+	padding: 14px 0;
+	color: #777;
+	line-height: 1.6em;
+	font-family: verdana, arial, helvetica, helve, sans-serif;
+}
+
+.images_1_of_3 .button {
+	margin-top: .3em;
+	line-height: 1.9em;
+}
+
+.images_1_of_3 .button a {
+	padding: 10px 12px;
+	font-size: 0.875em;
+	background: #68A4C4;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'Karla', sans-serif;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.images_1_of_3 .button a:hover {
+	background: #613854;
+	color: #FFF;
+	text-decoration: none;
+}
+
+/*----right-box----*/
+.right-box {
+	float: right;
+	width: 22.36%;
+	padding: 30px;
+	border: 1px solid #EEE;
+	background: #FFF;
+}
+
+.right-box h3 {
+	font-family: 'Karla', sans-serif;
+	color: #613854;
+	text-transform: uppercase;
+	font-size: 1.6em;
+}
+
+.right-box-grid-img {
+	float: left;
+	width: 30px;
+	padding: 5px;
+}
+
+.right-box-grid-info {
+	float: right;
+	width: 73%;
+	padding-top: 17px;
+}
+
+.shadow {
+	text-align: center;
+}
+
+.right-box-grid-info span {
+	color: #613854;
+	font-size: 0.8125em;
+	line-height: 1.6em;
+	font-family: verdana, arial, helvetica, helve, sans-serif;
+	padding-left: 20px;
+}
+
+.right-box-grid-info p {
+	font-size: 0.8125em;
+	color: #777;
+	line-height: 1.6em;
+	font-family: verdana, arial, helvetica, helve, sans-serif;
+}
+
+.right-box-grid-img img {
+	background: #3C3A3B;
+	padding: 5px;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.right-box-grid-img img:hover {
+	background: #613854;
+}
+
+.right-box-grid {
+	padding: 10px 0px;
+	border-bottom: 1px solid #EEE;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.right-box-grid:hover img {
+	background: #613854;
+}
+
+.seeall a {
+	font-size: 0.8125em;
+	padding: 11px 22px;
+	color: #613854;
+	line-height: 1.6em;
+	font-family: verdana, arial, helvetica, helve, sans-serif;
+	display: block;
+	background: url(../images/marker1.png) 0 16px no-repeat;
+}
+
+.seeall a:hover {
+	color: #613854;
+	background: url(../images/marker.png) 0 16px no-repeat;
+}
+
+.box {
+	margin: 5px 0px;
+}
+</style>
+<script src="js/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
 </head>
 <body>
 	<div id="wrapper">
@@ -25,14 +343,14 @@
 			<div class="header_top">
 				<!--header_top-->
 				<div class="container">
-					<div class="row" style="margin-bottom: 0px;">
+					<div class="row" style="margin-bottom: 0px; margin-left: -40px;">
 						<div class="col-sm-6">
 							<div class="contactinfo">
 								<ul class="nav nav-pills">
-									<li><a href="#"><i class="fa fa-phone"></i> 080 -
-											32947794</a></li>
 									<li><a href="#"><i class="fa fa-envelope"></i>
 											kripa.enquiry@yahoo.com</a></li>
+									<li><a href="#"><i class="fa fa-phone"></i> 080 -
+											32947794</a></li>
 								</ul>
 							</div>
 						</div>
@@ -77,34 +395,135 @@
 				</div>
 			</div>
 		</header>
-		<!-- end header -->
-		<section class="callaction">
-			<div class="container" style="width: 100%">
-				<!-- start slider -->
-				<div class="container">
-					<div class="row" style="margin-bottom: 10px;">
-						<div class="col-lg-12">
-							<!-- Slider -->
-							<div id="main-slider" class="flexslider" style="margin-top: 0px;">
-								<ul class="slides" style="height: 325px;">
-									<li><img src="img/kripaSolutions.PNG" alt="" /></li>
-									<li><img src="img/slides/lightproduct.jpg" alt=""
-										style="height: 300px;" /></li>
-									<li><img src="img/slides/solarpanel.jpg" alt=""
-										style="height: 300px;" /></li>
-									<li><img src="img/slides/solarWind.jpg" alt=""
-										style="height: 300px;" /></li>
-									<li><img src="img/slides/world technology.jpg" alt=""
-										style="height: 300px;" /></li>
+		<!--start-slider-->
+		<div class="slider-bg">
+			<div class="container">
+				<div class="grid-1">
+					<div class="col-md-5 left-grid-1 wow bounceInLeft"
+						data-wow-delay="0.4s">
+					</div>
+					<div class="col-md-7 right-grid-1 wow bounceInRight"
+						data-wow-delay="0.7s">
+						<div class="slider">
+							<div class="callbacks_container">
+								<ul class="rslides" id="slider">
+									<li><img src="img/slides/light.gif" class="img-responsive"
+										alt="" /></li>
+									<li><img src="img/slides/solarwind.gif"
+										class="img-responsive" alt="" /></li>
+									<li><img src="img/slides/solarpanel.gif"
+										class="img-responsive" alt="" /></li>
+
 								</ul>
 							</div>
-							<!-- end slider -->
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<!-- end header -->
+		<section class="callaction">
+			<div class="container" style="width: 100%">
+
+
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="box">
+							<div class="left-box">
+								<div class="grid_1_of_3 images_1_of_3">
+									<h3 style="height: 20px;">COMPANY OVERVIEW!</h3>
+									<img src="img/aboutUS.JPG" style="height: 140px;">
+									<div style="height: 130px;">
+										<p>KRIPA POWER SOLUTIONS, the organization, is one of the
+											leading manufacturers of Lights, RF products, Survilience and
+											IT solutions. Customers use our products to make their life
+											reliable.</p>
+									</div>
+									<div class="button">
+										<span><a href="#">Read More</a></span>
+									</div>
+								</div>
+								<div class="grid_1_of_3 images_1_of_3">
+									<h3 style="height: 20px;">ENVIRONMENT POLICY</h3>
+									<img src="img/environment.jpeg"
+										style="height: 140px; padding-left: 30px;">
+									<div style="height: 130px;">
+										<p>KRIPA POWER SOLUTIONS commits to meet all environmental
+											rules and regulations in the industry and to strive to
+											protect our environment through sound management practices
+											and decisions.</p>
+									</div>
+									<div class="button">
+										<span><a href="#">Read More</a></span>
+									</div>
+								</div>
+								<div class="grid_1_of_3 images_1_of_3">
+									<h3 style="height: 20px;">MISSION STATEMENT</h3>
+									<img src="img/vision-mission.jpg"
+										style="height: 140px; padding-left: 20px">
+									<div style="height: 130px">
+										<p>"Our mission is to maximize customer and shareholder
+											value through world class manufacturing practices:
+											continually striving for excellence in the products and
+											services we provide."</p>
+									</div>
+									<div class="button">
+										<span><a href="#">Read More</a></span>
+									</div>
+								</div>
+							</div>
+							<!-- <div class="section group">
+								
+								
+							</div> -->
+						</div>
+						<div class="right-box">
+							<h3>USEFULL LINKS</h3>
+							<div class="right-box-grid">
+								<div class="right-box-grid-img">
+									<a href="#"><img src="img/partnership.png" title="img"
+										style="width: 45px;" /></a>
+								</div>
+								<div class="right-box-grid-info">
+									<span>PARTNERS</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="right-box-grid">
+								<div class="right-box-grid-img">
+									<a href="#"><img src="img/products.png"
+										style="width: 45px;" title="img" /></a>
+								</div>
+								<div class="right-box-grid-info">
+									<span>PRODUCTS</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="right-box-grid">
+								<div class="right-box-grid-img">
+									<a href="#"><img src="img/career.png" style="width: 45px;"
+										title="img" /></a>
+								</div>
+								<div class="right-box-grid-info">
+									<span>CAREERS</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="right-box-grid">
+								<div class="right-box-grid-img">
+									<a href="#"><img src="img/aboutUs.png" title="img"
+										style="width: 45px;" /></a>
+								</div>
+								<div class="right-box-grid-info">
+									<span>ABOUT US</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<!-- <!-- <div class="row">
+						<div class="wow zoomIn col-lg-12 animated">
 							<div class="container1">
 								<div id="col1">
 									<h4 style="height: 20px;">
@@ -214,11 +633,11 @@
 											onClick="missionPanelToggleAction();">Read Less >></button>
 									</div>
 								</div>
-								<!-- <div >
+								<div >
 									<h4 style="height: 20px;">
 										<span style="text-transform: uppercase; color: #68A4C4">Categories</span>
 									</h4>
-								</div> -->
+								</div>
 								<div id="col4">
 									<aside class="right-sidebar">
 										<div class="widget">
@@ -229,7 +648,7 @@
 											</h4>
 											<ul class="cat" style="margin-left:-20px;">
 												<li style="padding: 15px; border-bottom: 1px solid #F5F6D5;"><img src="img/partnership.png" style="width:35px;height:35px;"></img><a href="#" style="padding-left:10px;font-weight:500;text-transform:uppercase;color:#68A4C4">Partners</a></li>
-												<li style="padding: 15px; border-bottom: 1px solid #F5F6D5;"><img src="img/products.png" style="width:35px;height:35px;"></img><a href="#" style="padding-left:10px;font-weight:500;text-transform:uppercase;color:#68A4C4">Future Products</a></li>
+												<li style="padding: 15px; border-bottom: 1px solid #F5F6D5;"><img src="img/products.png" style="width:35px;height:35px;"></img><a href="#" style="padding-left:10px;font-weight:500;text-transform:uppercase;color:#68A4C4">Projects</a></li>
 												<li style="padding: 15px; border-bottom: 1px solid #F5F6D5;"><img src="img/career.png" style="width:35px;height:35px;"></img><a href="#" style="padding-left:10px;font-weight:500;text-transform:uppercase;color:#68A4C4">Careers</a></li>
 												<li style="padding: 15px; border-bottom: 1px solid #F5F6D5;"><img src="img/aboutUs.png" style="width:35px;height:35px;"></img><a href="#" style="padding-left:10px;font-weight:500;text-transform:uppercase;color:#68A4C4">About Us</a></li>
 											</ul>
@@ -239,7 +658,7 @@
 							</div>
 
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>
@@ -279,6 +698,7 @@
 	<script src="js/jquery.flexslider.js"></script>
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
+
 	<script>
 		var hidden = false;
 		var envPanelHidden = false;
@@ -314,5 +734,17 @@
 			}
 		}
 	</script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+								$(function() {
+									$("#slider").responsiveSlides({
+										auto : true,
+										nav : true,
+										speed : 500,
+										namespace : "callbacks",
+										pager : true,
+									});
+								});
+							</script>
 </body>
 </html>

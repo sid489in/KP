@@ -1,0 +1,198 @@
+/*---content----*/
+/*  GRID OF THREE   ============================================================================= */
+.box {
+	margin: 5px 0px;
+}
+
+.left-box {
+	width: 900px;
+	float: left;
+	padding: 10px;
+	border: 1px solid #eee;
+	background: #FFF;
+}
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.group:before, .group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	zoom: 1;
+}
+
+.grid_1_of_3 {
+	display: block;
+	float: left;
+	margin: 1% 0 1% 1.6%;
+	border: 1px solid #eee;
+}
+
+.grid_1_of_3:first-child {
+	margin-left: 0;
+}
+
+.images_1_of_3 {
+	width: 32.0%;
+	padding: 1.5%;
+	background: #FFF;
+	text-align: justify;
+}
+
+.images_1_of_3  img {
+	max-width: 100%;
+	display: block;
+	-webkit-filter: grayscale(100%);
+	opacity: 0.99;
+	transition: all 300ms !important;
+	-webkit-transition: all 300ms !important;
+	-moz-transition: all 300ms !important;
+}
+
+.images_1_of_3  img:hover {
+	opacity: 1;
+	-webkit-filter: grayscale(0%);
+	cursor: pointer;
+}
+
+.images_1_of_3:hover img {
+	opacity: 1;
+	-webkit-filter: grayscale(0%);
+	cursor: pointer;
+}
+
+.images_1_of_3  h3 {
+	font-family: 'Karla', sans-serif;
+	color: #613854;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 1.6em;
+	padding: 0px 0px 10px 0px;
+}
+
+.images_1_of_3  p {
+	font-size: 0.8125em;
+	padding: 14px 0;
+	color: #111;
+	line-height: 1.6em;
+	font-family: verdana, arial, helvetica, helve, sans-serif;
+}
+
+.images_1_of_3 .button {
+	margin-top: .3em;
+	line-height: 1.9em;
+}
+
+.images_1_of_3 .button a {
+	padding: 10px 12px;
+	font-size: 0.875em;
+	background: #68A4C4;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'Karla', sans-serif;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.images_1_of_3 .button a:hover {
+	background: #613854;
+	color: #FFF;
+	text-decoration: none;
+}
+
+/*----right-box----*/
+.right-box {
+	float: right;
+	width: 22.36%;
+	padding: 30px;
+	border: 1px solid #EEE;
+	background: #FFF;
+}
+
+.right-box h3 {
+	font-family: 'Karla', sans-serif;
+	color: #613854;
+	text-transform: uppercase;
+	font-size: 1.6em;
+}
+
+.right-box-grid-img {
+	float: left;
+	width: 30px;
+	padding: 5px;
+}
+
+.right-box-grid-info {
+	float: right;
+	width: 73%;
+	padding-top: 17px;
+}
+
+.shadow {
+	text-align: center;
+}
+
+.right-box-grid-info span {
+	color: #613854;
+	font-size: 0.8125em;
+	line-height: 1.6em;
+	font-family: verdana, arial, helvetica, helve, sans-serif;
+	padding-left: 20px;
+}
+
+.right-box-grid-info p {
+	font-size: 0.8125em;
+	color: #777;
+	line-height: 1.6em;
+	font-family: verdana, arial, helvetica, helve, sans-serif;
+}
+
+.right-box-grid-img img {
+	background: #3C3A3B;
+	padding: 5px;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.right-box-grid-img img:hover {
+	background: #613854;
+}
+
+.right-box-grid {
+	padding: 10px 0px;
+	border-bottom: 1px solid #EEE;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.right-box-grid:hover img {
+	background: #613854;
+}
+
+.seeall a {
+	font-size: 0.8125em;
+	padding: 11px 22px;
+	color: #613854;
+	line-height: 1.6em;
+	font-family: verdana, arial, helvetica, helve, sans-serif;
+	display: block;
+	background: url(../images/marker1.png) 0 16px no-repeat;
+}
+
+.seeall a:hover {
+	color: #613854;
+	background: url(../images/marker.png) 0 16px no-repeat;
+}

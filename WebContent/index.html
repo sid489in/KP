@@ -8,420 +8,28 @@
 <meta name="author" content="http://bootstraptaste.com" />
 <!-- css -->
 <link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/datatables.bootstrap.css" rel="stylesheet">
-<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" />
 <link href="css/animate.css" rel="stylesheet" />
-
+<link href="css/gridLayout.css" rel="stylesheet" />
 <!-- Theme skin -->
 <link href="skins/default.css" rel="stylesheet" />
 <link href="css/navMenu.css" rel="stylesheet" />
 <link href="css/slider.css" rel="stylesheet" />
-<style>
-/*--- slider---*/
-.slider {
-	position: relative;
-	text-align: center;
-}
-
-.rslides {
-	position: relative;
-	list-style: none;
-	overflow: hidden;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-
-.rslides li {
-	-webkit-backface-visibility: hidden;
-	position: absolute;
-	display: none;
-	width: 100%;
-	left: 0;
-	top: 0;
-}
-
-.rslides li:first-child {
-	position: relative;
-	display: block;
-	float: left;
-}
-
-.callbacks_tabs a:after {
-	content: "\f111";
-	font-size: 0;
-	font-family: FontAwesome;
-	visibility: visible;
-	display: block;
-	width: 51px;
-	height: 27px;
-	display: inline-block;
-	border: 1px solid #fff;
-	background: #fff;
-}
-
-.callbacks_here a:after {
-	border: 1px solid #F7F0F0;
-	background: #EC5844;
-}
-
-.callbacks_tabs a {
-	visibility: hidden;
-}
-
-.callbacks_tabs li {
-	display: inline-block;
-}
-
-ul.callbacks_tabs.callbacks1_tabs {
-	position: absolute;
-	bottom: 7.3%;
-	z-index: 999;
-	left: -76%;
-	display: block;
-}
-
-.callbacks_nav {
-	position: absolute;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	top: 73%;
-	left: 15%;
-	opacity: 0.7;
-	z-index: 999;
-	background: transparent url("img/gif.png") no-repeat 0px 0px;
-	margin-top: -45px;
-	display: none;
-}
-
-.callbacks_nav.next {
-	left: auto;
-	background-position: right top;
-	right: 15%;
-}
-
-.slider-bg {
-	background: url("img/bg3.jpg") no-repeat 0px 0px;
-	padding: 1em 0 0 0;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-o- background-size: cover;
-	-moz- background-size: cover;
-	height: 400px;
-}
-
-.left-grid-1 {
-	margin-top: 1em;
-	float: left;
-}
-
-.right-grid-1 {
-	float: right;
-}
-
-.left-grid-1 h1, .left-grid-1 h2, .left-grid-1 h3 {
-	color: #fff;
-	background: #EC5844;
-	padding: 0.2em 0.2em;
-	width: 71%;
-	font-size: 2em;
-	border-bottom: 1px solid #fff;
-	font-family: 'Oswald', sans-serif;
-}
-
-.left-grid-1 h2 {
-	width: 60%;
-	font-size: 2em;
-	border: none;
-}
-
-.left-grid-1 h3 {
-	border-top: 1px solid #fff;
-	border-bottom: none;
-}
-
-.left-box {
-	width: 900px;
-	float: left;
-	padding: 10px;
-	border: 1px solid #eee;
-	background: #FFF;
-}
-
-/*---content----*/
-/*  GRID OF THREE   ============================================================================= */
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-}
-
-.group:before, .group:after {
-	content: "";
-	display: table;
-}
-
-.group:after {
-	clear: both;
-}
-
-.group {
-	zoom: 1;
-}
-
-.grid_1_of_3 {
-	display: block;
-	float: left;
-	margin: 1% 0 1% 1.6%;
-	border: 1px solid #eee;
-}
-
-.grid_1_of_3:first-child {
-	margin-left: 0;
-}
-
-.images_1_of_3 {
-	width: 32.0%;
-	padding: 1.5%;
-	background: #FFF;
-}
-
-.images_1_of_3  img {
-	max-width: 100%;
-	display: block;
-	-webkit-filter: grayscale(100%);
-	opacity: 0.99;
-	transition: all 300ms !important;
-	-webkit-transition: all 300ms !important;
-	-moz-transition: all 300ms !important;
-}
-
-.images_1_of_3  img:hover {
-	opacity: 1;
-	-webkit-filter: grayscale(0%);
-	cursor: pointer;
-}
-
-.images_1_of_3:hover img {
-	opacity: 1;
-	-webkit-filter: grayscale(0%);
-	cursor: pointer;
-}
-
-.images_1_of_3  h3 {
-	font-family: 'Karla', sans-serif;
-	color: #613854;
-	text-transform: uppercase;
-	letter-spacing: -1px;
-	font-size: 1.6em;
-	padding: 0px 0px 10px 0px;
-}
-
-.images_1_of_3  p {
-	font-size: 0.8125em;
-	padding: 14px 0;
-	color: #777;
-	line-height: 1.6em;
-	font-family: verdana, arial, helvetica, helve, sans-serif;
-}
-
-.images_1_of_3 .button {
-	margin-top: .3em;
-	line-height: 1.9em;
-}
-
-.images_1_of_3 .button a {
-	padding: 10px 12px;
-	font-size: 0.875em;
-	background: #68A4C4;
-	text-transform: uppercase;
-	color: #fff;
-	font-family: 'Karla', sans-serif;
-	transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-}
-
-.images_1_of_3 .button a:hover {
-	background: #613854;
-	color: #FFF;
-	text-decoration: none;
-}
-
-/*----right-box----*/
-.right-box {
-	float: right;
-	width: 22.36%;
-	padding: 30px;
-	border: 1px solid #EEE;
-	background: #FFF;
-}
-
-.right-box h3 {
-	font-family: 'Karla', sans-serif;
-	color: #613854;
-	text-transform: uppercase;
-	font-size: 1.6em;
-}
-
-.right-box-grid-img {
-	float: left;
-	width: 30px;
-	padding: 5px;
-}
-
-.right-box-grid-info {
-	float: right;
-	width: 73%;
-	padding-top: 17px;
-}
-
-.shadow {
-	text-align: center;
-}
-
-.right-box-grid-info span {
-	color: #613854;
-	font-size: 0.8125em;
-	line-height: 1.6em;
-	font-family: verdana, arial, helvetica, helve, sans-serif;
-	padding-left: 20px;
-}
-
-.right-box-grid-info p {
-	font-size: 0.8125em;
-	color: #777;
-	line-height: 1.6em;
-	font-family: verdana, arial, helvetica, helve, sans-serif;
-}
-
-.right-box-grid-img img {
-	background: #3C3A3B;
-	padding: 5px;
-	transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-}
-
-.right-box-grid-img img:hover {
-	background: #613854;
-}
-
-.right-box-grid {
-	padding: 10px 0px;
-	border-bottom: 1px solid #EEE;
-	transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-}
-
-.right-box-grid:hover img {
-	background: #613854;
-}
-
-.seeall a {
-	font-size: 0.8125em;
-	padding: 11px 22px;
-	color: #613854;
-	line-height: 1.6em;
-	font-family: verdana, arial, helvetica, helve, sans-serif;
-	display: block;
-	background: url(../images/marker1.png) 0 16px no-repeat;
-}
-
-.seeall a:hover {
-	color: #613854;
-	background: url(../images/marker.png) 0 16px no-repeat;
-}
-
-.box {
-	margin: 5px 0px;
-}
-
-/*--flexisel--*/
-#flexiselDemo1 {
-	display: none;
-}
-
-.nbs-flexisel-container {
-	position: relative;
-	max-width: 100%;
-}
-
-.nbs-flexisel-ul {
-	position: relative;
-	width: 9999px;
-	margin: 0px;
-	padding: 0px;
-	list-style-type: none;
-	text-align: center;
-}
-
-.nbs-flexisel-inner {
-	overflow: hidden;
-	padding: 30px 0 80px 0;
-	width: 95%;
-	margin: 0 auto;
-}
-
-.nbs-flexisel-item {
-	float: left;
-	margin: 0;
-	padding: 0px;
-	cursor: pointer;
-	position: relative;
-	line-height: 0px;
-}
-
-.nbs-flexisel-item>img {
-	cursor: pointer;
-	position: relative;
-}
-</style>
+<link href="css/camera.css" rel="stylesheet" />
 <script src="js/wow.min.js"></script>
 <script>
 	new WOW().init();
 </script>
+<link rel="shortcut icon" href="img/kripa_logo.png">
 </head>
-<body>
+<body style="background: img/bg.jpg">
 	<div id="wrapper">
 		<!-- start header -->
 		<header>
-			<div class="header_top">
-				<!--header_top-->
-				<div class="container">
-					<div class="row" style="margin-bottom: 0px; margin-left: -40px;">
-						<div class="col-sm-6">
-							<div class="contactinfo">
-								<ul class="nav nav-pills">
-									<li><a href="#"><i class="fa fa-envelope"></i>
-											kripa.enquiry@yahoo.com</a></li>
-									<li><a href="#"><i class="fa fa-phone"></i> 080 -
-											32947794</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="social-icons pull-right">
-								<ul class="nav navbar-nav">
-									<li style="padding: 0px;"><a href="#"><i
-											class="fa fa-facebook"></i></a></li>
-									<li style="padding: 0px;"><a href="#"><i
-											class="fa fa-twitter"></i></a></li>
-									<li style="padding: 0px;"><a href="#"><i
-											class="fa fa-linkedin"></i></a></li>
-									<li style="padding: 0px;"><a href="#"><i
-											class="fa fa-google-plus"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/header_top-->
+			<div id="headerContent"></div>
 			<div class="navbar navbar-default">
 				<div class="container">
-					<div class="navbar-header">
+					<div class="	">
 						<button type="button" class="navbar-toggle" data-toggle="collapse"
 							data-target=".navbar-collapse">
 							<span class="icon-bar"></span> <span class="icon-bar"></span> <span
@@ -444,20 +52,39 @@ ul.callbacks_tabs.callbacks1_tabs {
 		</header>
 		<!--start-slider-->
 		<div class="slider-bg">
-			<div class="container">
+			<div class="container" style="margin-top: 10px">
 				<div class="grid-1">
 					<div class="col-md-5 left-grid-1 wow bounceInLeft"
-						data-wow-delay="0.4s"></div>
+						data-wow-delay="0.4s" style="padding-top:7%">
+						<div>
+							<div>
+								<ul class="rslides" id="contentSlider"
+									style="z-index: 999; list-style: none;">
+									<li>
+										<h1 class="custom-h1">
+											WE CARE FOR QUALITY IN EVERYTHING WE DO.
+										</h1>
+									</li>
+									<li>
+										<h1 class="custom-h1">RENEWABLE ENERGY FOR A SUSTAINABLE WORLD</h1>
+									</li>
+									<li>
+										<h1 class="custom-h1">THE FUTURE IS HERE, AND ITS A BRIGHT ONE.</h1>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 					<div class="col-md-7 right-grid-1 wow bounceInRight"
 						data-wow-delay="0.7s">
 						<div class="slider">
 							<div class="callbacks_container">
 								<ul class="rslides" id="slider" style="z-index: 999">
-									<li><img src="img/slides/light.gif" class="img-responsive"
-										alt="" style="z-index: 999" /></li>
-									<li><img src="img/slides/solarwind.gif"
+									<li><img src="img/slides/lightbulb.png"
+										class="img-responsive" alt="" style="z-index: 999" /></li>
+									<li><img src="img/slides/solarpanel.png"
 										class="img-responsive" alt="" /></li>
-									<li><img src="img/slides/solarpanel.gif"
+									<li><img src="img/slides/lights.png"
 										class="img-responsive" alt="" /></li>
 
 								</ul>
@@ -475,94 +102,144 @@ ul.callbacks_tabs.callbacks1_tabs {
 
 				<div class="container">
 					<div class="row">
-						<div class="box">
-							<div class="left-box">
-								<div class="grid_1_of_3 images_1_of_3">
-									<h3 style="height: 20px;">COMPANY OVERVIEW!</h3>
-									<img src="img/aboutUS.JPG" style="height: 140px;">
-									<div style="height: 130px;">
-										<p>KRIPA POWER SOLUTIONS, the organization, is one of the
-											leading manufacturers of Lights, RF products, Survilience and
-											IT solutions. Customers use our products to make their life
-											reliable.</p>
-									</div>
-									<div class="button">
-										<span><a href="#">Read More</a></span>
-									</div>
+
+						<div class="left-box">
+							<div class="grid_1_of_3 images_1_of_3">
+								<h3 style="height: 20px;">COMPANY OVERVIEW</h3>
+								<img src="img/aboutUS.JPG"
+									style="height: 140px; padding-left: 20px">
+								<div style="height: 150px;">
+									<p>Kripa Power Solutions is one of the leading
+										manufacturers of Lighting products, RF & Antenna equipment and
+										Surveillance & Telecom solutions. The organization has been
+										the primary business vendor to many established brands in the
+										market for over a decade.</p>
 								</div>
-								<div class="grid_1_of_3 images_1_of_3">
-									<h3 style="height: 20px;">ENVIRONMENT POLICY</h3>
-									<img src="img/environment.jpeg"
-										style="height: 140px; padding-left: 30px;">
-									<div style="height: 130px;">
-										<p>KRIPA POWER SOLUTIONS commits to meet all environmental
-											rules and regulations in the industry and to strive to
-											protect our environment through sound management practices
-											and decisions.</p>
-									</div>
-									<div class="button">
-										<span><a href="#">Read More</a></span>
-									</div>
+								<div class="button" id="toggler">
+									<span><a data-toggle="collapse" data-target="#demo"
+										onClick="action();return false;" style="cursor: pointer;">Read
+											More</a></span>
 								</div>
-								<div class="grid_1_of_3 images_1_of_3">
-									<h3 style="height: 20px;">MISSION STATEMENT</h3>
-									<img src="img/vision-mission.jpg"
-										style="height: 140px; padding-left: 20px">
-									<div style="height: 130px">
-										<p>"Our mission is to maximize customer and shareholder
-											value through world class manufacturing practices:
-											continually striving for excellence in the products and
-											services we provide."</p>
+								<div id="demo" class="collapse out" style="margin-top: -10px;">
+									<p style="margin: 0px;">Kripa's phenomenal success can be
+										directly linked to the company’s customer centric operational
+										strategies. Customers and Businesses are assured innovation,
+										cost-effective solutions of superior quality with zero defects
+										in the shortest possible time.</p>
+									<p style="margin: 0px;">Our foray of quality recognitions
+										are an embodiment to our distinguishing and acute focus
+										towards both our mission and customer satisfaction.</p>
+
+									<div class="button" id="togglee">
+										<span><a data-toggle="collapse" data-target="#demo"
+											onClick="action();return false;" style="cursor: pointer;">Read
+												Less</a></span>
 									</div>
-									<div class="button">
-										<span><a href="#">Read More</a></span>
+
+								</div>
+							</div>
+							<div class="grid_1_of_3 images_1_of_3">
+								<h3 style="height: 20px;">ENVIRONMENT POLICY</h3>
+								<img src="img/environmental-protection.jpg"
+									style="height: 140px; padding-left: 5px">
+								<div style="height: 150px;">
+									<p>KRIPA POWER SOLUTIONS commits to meet all environmental
+										rules and regulations in the industry and to strive to protect
+										our environment through sound management practices and
+										decisions.</p>
+								</div>
+								<div class="button" id="envPanelToggler">
+									<span><a data-toggle="collapse" data-target="#envPanel"
+										onClick="envPanelToggleAction();return false;"
+										style="cursor: pointer;">Read More</a></span>
+								</div>
+
+								<div id="envPanel" class="collapse out"
+									style="margin-top: -20px;">
+									<p style="margin: 0px;">The organization intends and
+										implements to prevent environmental pollution by striving to
+										minimize waste generation and resource consumption.Kripa Power
+										Solutions will establish and evaluate achievable environmental
+										performance goals to ensure continual improvement of its EMS.</p>
+									<div class="button" id="envPanelTogglee">
+										<span><a data-toggle="collapse" data-target="#envPanel"
+											onClick="envPanelToggleAction();return false;"
+											style="cursor: pointer;">Read Less</a></span>
 									</div>
 								</div>
 							</div>
-							<!-- <div class="section group">
-								
-								
-							</div> -->
+							<div class="grid_1_of_3 images_1_of_3">
+								<h3 style="height: 20px;">MISSION</h3>
+								<img src="img/time.jpg"
+									style="height: 140px; padding-left: 20px">
+								<div style="height: 150px">
+									<p>"Our mission is to maximize customer and shareholder
+										value through world class manufacturing practices while
+										continually striving for excellence in the products and
+										services that we provide."</p>
+								</div>
+								<div class="button" id="missionPanelToggler">
+									<span><a data-toggle="collapse"
+										data-target="#missionPanel"
+										onClick="missionPanelToggleAction();return false;"
+										style="cursor: pointer;">Read More</a></span>
+								</div>
+
+								<div id="missionPanel" class="collapse out"
+									style="margin-top: -20px;">
+									<p>"Our values make it essential for us to lead by example
+										through a commitment that empowers the organization at every
+										level and strive for the highest levels of quality, customer
+										care and shareholder value."</p>
+									<div class="button" id="missionPanelTogglee">
+										<span><a data-toggle="collapse"
+											data-target="#missionPanel"
+											onClick="missionPanelToggleAction();return false;"
+											style="cursor: pointer;">Read Less</a></span>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="right-box">
-							<h3>USEFULL LINKS</h3>
+							<h3>USEFUL LINKS</h3>
 							<div class="right-box-grid">
 								<div class="right-box-grid-img">
-									<a href="#"><img src="img/partnership.png" title="img"
-										style="width: 45px;" /></a>
+									<a href="#"><img src="img/partnership.png"
+										title="OUR PARTNERS" style="width: 45px;" /></a>
 								</div>
 								<div class="right-box-grid-info">
-									<span>PARTNERS</span>
+									<a href="partners.html" style="cursor: pointer;"><span>PARTNERS</span></a>
 								</div>
 								<div class="clear"></div>
 							</div>
 							<div class="right-box-grid">
 								<div class="right-box-grid-img">
 									<a href="#"><img src="img/products.png"
-										style="width: 45px;" title="img" /></a>
+										style="width: 45px;" title="PROJECTS" /></a>
 								</div>
 								<div class="right-box-grid-info">
-									<span>PRODUCTS</span>
+									<a style="cursor: pointer;" href="projects.html"><span>PROJECTS</span></a>
 								</div>
 								<div class="clear"></div>
 							</div>
 							<div class="right-box-grid">
 								<div class="right-box-grid-img">
 									<a href="#"><img src="img/career.png" style="width: 45px;"
-										title="img" /></a>
+										title="CAREER WITH US" /></a>
 								</div>
 								<div class="right-box-grid-info">
-									<span>CAREERS</span>
+									<a style="cursor: pointer;" href="careers.html"><span>CAREERS</span></a>
 								</div>
 								<div class="clear"></div>
 							</div>
 							<div class="right-box-grid">
 								<div class="right-box-grid-img">
-									<a href="#"><img src="img/aboutUs.png" title="img"
+									<a href="#"><img src="img/aboutUs.png" title="ABOUT US"
 										style="width: 45px;" /></a>
 								</div>
 								<div class="right-box-grid-info">
-									<span>ABOUT US</span>
+									<a style="cursor: pointer;" href="aboutUs.html"><span>ABOUT
+											US</span></a>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -571,47 +248,49 @@ ul.callbacks_tabs.callbacks1_tabs {
 					<div class="row">
 						<div class="box">
 							<div class="left-box" style="width: 100%">
-								<h3 style="text-align: center">SOME OF OUR CLIENTS</h3>
+								<h3 style="text-align: center; color: #68A4C4">SOME OF OUR
+									CLIENTS</h3>
 								<div class="clients-grids">
 									<ul id="flexiselDemo1">
 										<li style="padding: 5px;">
 											<div class="client-grid text-center">
-												<img src="img/clients/tvs.jpg" alt="" style="height: 100px;" />
-											</div>
-										</li>
-										<li style="padding: 5px;">
-											<div class="client-grid text-center">
-												<img src="img/clients/indianRailway.png" alt=""
+												<img src="img/clients/corporateClient/tvs.jpg" alt=""
 													style="height: 100px;" />
 											</div>
 										</li>
 										<li style="padding: 5px;">
 											<div class="client-grid text-center">
-												<img src="img/clients/isra.png" alt=""
+												<img src="img/clients/govtClient/indianRailway.png" alt=""
 													style="height: 100px;" />
 											</div>
 										</li>
 										<li style="padding: 5px;">
 											<div class="client-grid text-center">
-												<img src="img/clients/kredl.jpg" alt=""
+												<img src="img/clients/govtClient/isra.png" alt=""
 													style="height: 100px;" />
 											</div>
 										</li>
 										<li style="padding: 5px;">
 											<div class="client-grid text-center">
-												<img src="img/clients/Hal.png" alt=""
+												<img src="img/clients/corporateClient/LNT.png" alt=""
 													style="height: 100px;" />
 											</div>
 										</li>
 										<li style="padding: 5px;">
 											<div class="client-grid text-center">
-												<img src="img/clients/manipalPicture.jpg" alt=""
+												<img src="img/clients/govtClient/Hal.png" alt=""
 													style="height: 100px;" />
 											</div>
 										</li>
 										<li style="padding: 5px;">
 											<div class="client-grid text-center">
-												<img src="img/clients/bmtc.jpg" alt=""
+												<img src="img/clients/corporateClient/tata.png" alt=""
+													style="height: 100px;" />
+											</div>
+										</li>
+										<li style="padding: 5px;">
+											<div class="client-grid text-center">
+												<img src="img/clients/corporateClient/dell.jpg" alt=""
 													style="height: 100px;" />
 											</div>
 										</li>
@@ -620,144 +299,6 @@ ul.callbacks_tabs.callbacks1_tabs {
 							</div>
 						</div>
 					</div>
-
-					<!-- <!-- <div class="row">
-						<div class="wow zoomIn col-lg-12 animated">
-							<div class="container1">
-								<div id="col1">
-									<h4 style="height: 20px;">
-										<span style="text-transform: uppercase; color: #68A4C4">COMPANY
-											OVERVIEW</span>
-									</h4>
-									<img src="img/aboutUS.JPG"
-										style="width: 235px; height: 200px;" />
-									<div style="width: 235px; padding-top: 10px;">
-										<p style="margin: 0px;">KRIPA POWER SOLUTIONS, the
-											organization, is one of the leading manufacturers of Lights,
-											RF products, Survilience and IT solutions. Customers use our
-											products to make their life reliable.</p>
-
-										<button type="button" class="btn btn-info" id="toggler"
-											style="background-color: transparent; border: none; color: #68A4C4; cursor: pointer; margin-left: -10px;"
-											data-toggle="collapse" data-target="#demo"
-											onClick="action();">Read More >></button>
-
-										<div id="demo" class="collapse out" style="margin-top: -10px;">
-											<p style="margin: 0px;">Kripa's phenomenal success can be
-												directly linked to the fact that the Company operates in a
-												customer centric manner supplying innovative, cost-effective
-												solutions of superior quality with zero defects in the
-												shortest possible time. One of Kripa's distinguishing
-												characteristic is the depth of our focus on the customer's
-												mission in the broadest context.</p>
-											<br>
-											<p style="margin: 0px;">World-class, hardware products
-												and solutions for the telecom industry. Founded in 2000 by a
-												highly innovative team, KRIPA POWER SOLUTIONS designs,
-												develops, tests and implements a diverse range of products,
-												from concept to deployment. With over 100 R&D man-years of
-												experience, KRIPA POWER SOLUTIONS is uniquely positioned to
-												offer an array of world-class products and solutions to meet
-												all hardware requirements of telecom manufacturers, telecom
-												service providers and telecom users.</p>
-
-										</div>
-										<button type="button" class="btn btn-info" id="togglee"
-											style="background-color: transparent; border: none; color: #68A4C4; cursor: pointer; margin-left: -10px; visibility: hidden;"
-											data-toggle="collapse" data-target="#demo"
-											onClick="action();">Read Less >></button>
-									</div>
-								</div>
-								<div id="col2">
-									<h4 style="height: 20px;">
-										<span style="text-transform: uppercase; color: #68A4C4">ENVIRONMENT
-											POLICY </span>
-									</h4>
-									<img src="img/environment.jpeg"
-										style=" height: 200px" />
-									<div style="width: 235px; padding-top: 10px;">
-										<p style="margin: 0px;">KRIPA POWER SOLUTIONS commits to
-											meet all environmental rules and regulations in the industry
-											and to strive to protect our environment through sound
-											management practices and decisions.</p>
-										<button type="button" class="btn btn-info"
-											id="envPanelToggler"
-											style="background-color: transparent; border: none; color: #68A4C4; cursor: pointer; margin-left: -10px;"
-											data-toggle="collapse" data-target="#envPanel"
-											onClick="envPanelToggleAction();">Read More >></button>
-
-										<div id="envPanel" class="collapse out"
-											style="margin-top: -10px;">
-											<p style="margin: 0px;">KRIPA POWER SOLUTIONS will
-												prevent pollution by striving to minimize waste generation
-												and resource consumption. KRIPA POWER SOLUTIONS will
-												establish and evaluate achievable environmental performance
-												goals to ensure continual improvement of its EMS.</p>
-										</div>
-										<button type="button" class="btn btn-info"
-											id="envPanelTogglee"
-											style="background-color: transparent; border: none; color: #68A4C4; cursor: pointer; margin-left: -10px; visibility: hidden;"
-											data-toggle="collapse" data-target="#envPanel"
-											onClick="envPanelToggleAction();">Read Less >></button>
-									</div>
-								</div>
-								<div id="col3">
-									<h4 style="height: 20px;">
-										<span style="text-transform: uppercase; color: #68A4C4">MISSION
-											STATEMENT</span>
-									</h4>
-									<img src="img/vision-mission.jpg"
-										style="width: 235px; height: 200px" />
-									<div style="width: 235px; padding-top: 10px;">
-										<p style="margin: 0px;">"Our mission is to maximize
-											customer and shareholder value through world class
-											manufacturing practices: continually striving for excellence
-											in the products and services we provide."</p>
-										<button type="button" class="btn btn-info"
-											id="missionPanelToggler"
-											style="background-color: transparent; border: none; color: #68A4C4; cursor: pointer; margin-left: -10px;"
-											data-toggle="collapse" data-target="#missionPanel"
-											onClick="missionPanelToggleAction();">Read More >></button>
-
-										<div id="missionPanel" class="collapse out"
-											style="margin-top: -10px;">
-											<p>"To lead by example through a commitment that empowers
-												the organization at every level to strive for the highest
-												levels of quality, customer care and shareholder value."</p>
-										</div>
-										<button type="button" class="btn btn-info"
-											id="missionPanelTogglee"
-											style="background-color: transparent; border: none; color: #68A4C4; cursor: pointer; margin-left: -10px; visibility: hidden;"
-											data-toggle="collapse" data-target="#missionPanel"
-											onClick="missionPanelToggleAction();">Read Less >></button>
-									</div>
-								</div>
-								<div >
-									<h4 style="height: 20px;">
-										<span style="text-transform: uppercase; color: #68A4C4">Categories</span>
-									</h4>
-								</div>
-								<div id="col4">
-									<aside class="right-sidebar">
-										<div class="widget">
-											<h4 style="height: 20px;">
-												<span
-													style="color: #68A4C4; font-weight: 200; text-transform: uppercase">Usefull
-													Links</span>
-											</h4>
-											<ul class="cat" style="margin-left:-20px;">
-												<li style="padding: 15px; border-bottom: 1px solid #F5F6D5;"><img src="img/partnership.png" style="width:35px;height:35px;"></img><a href="#" style="padding-left:10px;font-weight:500;text-transform:uppercase;color:#68A4C4">Partners</a></li>
-												<li style="padding: 15px; border-bottom: 1px solid #F5F6D5;"><img src="img/products.png" style="width:35px;height:35px;"></img><a href="#" style="padding-left:10px;font-weight:500;text-transform:uppercase;color:#68A4C4">Projects</a></li>
-												<li style="padding: 15px; border-bottom: 1px solid #F5F6D5;"><img src="img/career.png" style="width:35px;height:35px;"></img><a href="#" style="padding-left:10px;font-weight:500;text-transform:uppercase;color:#68A4C4">Careers</a></li>
-												<li style="padding: 15px; border-bottom: 1px solid #F5F6D5;"><img src="img/aboutUs.png" style="width:35px;height:35px;"></img><a href="#" style="padding-left:10px;font-weight:500;text-transform:uppercase;color:#68A4C4">About Us</a></li>
-											</ul>
-										</div>
-									</aside>
-								</div>
-							</div>
-
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</section>
@@ -780,7 +321,8 @@ ul.callbacks_tabs.callbacks1_tabs {
 			</div>
 		</div>
 	</div>
-	<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+	<a href="#" class="scrollup" title="Back to top"><i
+		class="fa fa-angle-up active"></i></a>
 	<!-- javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -795,6 +337,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	<script src="js/portfolio/jquery.quicksand.js"></script>
 	<script src="js/portfolio/setting.js"></script>
 	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/templatesInclude.js"></script>
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
 
@@ -805,31 +348,25 @@ ul.callbacks_tabs.callbacks1_tabs {
 		function action() {
 			hidden = !hidden;
 			if (hidden) {
-				document.getElementById('togglee').style.visibility = 'visible';
-				document.getElementById('toggler').style.visibility = 'hidden';
+				document.getElementById('toggler').style.display = 'none';
 			} else {
-				document.getElementById('togglee').style.visibility = 'hidden';
-				document.getElementById('toggler').style.visibility = 'visible';
+				document.getElementById('toggler').style.display = 'block';
 			}
 		}
 		function envPanelToggleAction() {
 			envPanelHidden = !envPanelHidden;
 			if (envPanelHidden) {
-				document.getElementById('envPanelTogglee').style.visibility = 'visible';
-				document.getElementById('envPanelToggler').style.visibility = 'hidden';
+				document.getElementById('envPanelToggler').style.display = 'none';
 			} else {
-				document.getElementById('envPanelTogglee').style.visibility = 'hidden';
-				document.getElementById('envPanelToggler').style.visibility = 'visible';
+				document.getElementById('envPanelToggler').style.display = 'block';
 			}
 		}
 		function missionPanelToggleAction() {
 			missionPanelHidden = !missionPanelHidden;
 			if (missionPanelHidden) {
-				document.getElementById('missionPanelTogglee').style.visibility = 'visible';
-				document.getElementById('missionPanelToggler').style.visibility = 'hidden';
+				document.getElementById('missionPanelToggler').style.display = 'none';
 			} else {
-				document.getElementById('missionPanelTogglee').style.visibility = 'hidden';
-				document.getElementById('missionPanelToggler').style.visibility = 'visible';
+				document.getElementById('missionPanelToggler').style.display = 'block';
 			}
 		}
 	</script>
@@ -842,6 +379,15 @@ ul.callbacks_tabs.callbacks1_tabs {
 				speed : 500,
 				namespace : "callbacks",
 				pager : true,
+			});
+		});
+		$(function() {
+			$("#contentSlider").responsiveSlides({
+				auto : true,
+				speed : 500,
+				namespace : "",
+				pager : false,
+				nav : false
 			});
 		});
 	</script>

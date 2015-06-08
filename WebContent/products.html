@@ -12,7 +12,7 @@
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
 <link href="css/animate.css" rel="stylesheet" />
-
+<link href="css/gridLayout.css" rel="stylesheet" />
 
 <!-- Theme skin -->
 <link href="skins/default.css" rel="stylesheet" />
@@ -22,44 +22,13 @@
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+<link rel="shortcut icon" href="img/kripa_logo.png">
 </head>
 <body>
 	<div id="wrapper">
 		<!-- start header -->
 		<header>
-			<div class="header_top">
-				<!--header_top-->
-				<div class="container">
-					<div class="row" style="margin-bottom: 0px;margin-left:-40px;">
-						<div class="col-sm-6">
-							<div class="contactinfo">
-								<ul class="nav nav-pills">
-									<li><a href="#"><i class="fa fa-envelope"></i>
-											kripa.enquiry@yahoo.com</a></li>
-									<li><a href="#"><i class="fa fa-phone"></i> 080 -
-											32947794</a></li>		
-								</ul>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="social-icons pull-right">
-								<ul class="nav navbar-nav">
-									<li style="padding: 0px;"><a href="#"><i
-											class="fa fa-facebook"></i></a></li>
-									<li style="padding: 0px;"><a href="#"><i
-											class="fa fa-twitter"></i></a></li>
-									<li style="padding: 0px;"><a href="#"><i
-											class="fa fa-linkedin"></i></a></li>
-									<li style="padding: 0px;"><a href="#"><i
-											class="fa fa-google-plus"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/header_top-->
+			<div id="headerContent"></div>
 			<div class="navbar navbar-default">
 				<div class="container">
 					<div class="navbar-header">
@@ -98,53 +67,201 @@
 			</div>
 		</section>
 
-		<section id="content">
+		<section id="content" style="background: #f9f9f9">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12" style="margin-left: 10%;">
-						<div class="row">
-							<div class="wow zoomIn col-lg-3 animated">
-								<div class="box">
-									<div class="box-gray aligncenter">
-										<h4 style="height:30px;">Surveillance & IT solutions</h4>
-										<div class="icon">
-											<i class="fa fa-desktop fa-3x"></i>
-										</div>
-										<p>We make the network which connects people.</p>
+					<div class="box">
+						<div class="left-box" style="width: 100%">
+							<h3 style="text-align: center;color:#68A4C4">OUR PRODUCTS AT YOUR SERVICE</h3>
+							<div class="col-lg-12" style="margin-left: 0.5%;">
+								<div class="row">
+									<div class="wow zoomIn col-lg-3 animated">
+										<div class="box">
+											<div class="box-gray aligncenter">
+												<h4 style="height: 30px;">Surveillance & IT solutions</h4>
+												<div class="icon">
+													<i class="fa fa-desktop fa-3x"></i>
+												</div>
+												<p>We make the network which connects people.</p>
 
+											</div>
+											<div class="box-bottom">
+												<a href="#survelenceProduct"
+													onclick="showSurveillanceProducts()">Explore more</a>
+											</div>
+										</div>
 									</div>
-									<div class="box-bottom">
-										<a href="telecomProducts.html">Explore more</a>
+									<div class="wow zoomIn col-lg-3 animated">
+										<div class="box">
+											<div class="box-gray aligncenter">
+												<h4 style="height: 30px;">Renewable Energy Products</h4>
+												<div class="icon">
+													<i class="fa fa-pagelines fa-3x"></i>
+												</div>
+												<p>Renewable Energy for a Sustainable World</p>
+
+											</div>
+											<div class="box-bottom">
+												<a href="#renewableProducts"
+													onClick="showRenewableProducts()">Explore more</a>
+											</div>
+										</div>
+									</div>
+									<div class="wow zoomIn col-lg-3 animated">
+										<div class="box">
+											<div class="box-gray aligncenter">
+												<h4 style="height: 30px;">Lights</h4>
+												<div class="icon">
+													<i class="fa fa-lightbulb-o fa-3x"></i>
+												</div>
+												<p>The future is here, and it's a bright one.</p>
+
+											</div>
+											<div class="box-bottom">
+												<a href="lightProducts.html">Explore more</a>
+											</div>
+										</div>
+									</div>
+									<div class="wow zoomIn col-lg-3 animated">
+										<div class="box">
+											<div class="box-gray aligncenter">
+												<h4 style="height: 30px;">Electrical Accessories</h4>
+												<div class="icon">
+													<i class="fa fa-lightbulb-o fa-3x"></i>
+												</div>
+												<p>Let us get you on the circuit to success</p>
+
+											</div>
+											<div class="box-bottom">
+												<a href="lightProducts.html">Explore more</a>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="wow zoomIn col-lg-3 animated">
-								<div class="box">
-									<div class="box-gray aligncenter">
-										<h4 style="height:30px;">Renewable Energy Products</h4>
-										<div class="icon">
-											<i class="fa fa-pagelines fa-3x"></i>
-										</div>
-										<p >Today's resource for a better tomorrow</p>
+						</div>
+					</div>
 
+				</div>
+			</div>
+		</section>
+
+		<section id="survelenceProduct" style="display: none;"
+			style="background:#f9f9f9">
+			<div class="container">
+				<div class="row">
+					<div class="box">
+						<div class="left-box" style="width: 100%">
+							<h3 style="text-align: center;color:#68A4C4">Surveillance & IT solutions</h3>
+							<div class="col-lg-12" style="margin-left: 10%;">
+								<div class="row">
+									<div class="wow zoomIn col-lg-3 animated">
+										<div class="box">
+											<div class="box-gray aligncenter">
+												<h4 style="height: 30px;">Telecom</h4>
+												<div class="icon">
+													<i class="fa fa-desktop fa-3x"></i>
+												</div>
+												<p>We make the network which connects people.</p>
+
+											</div>
+											<div class="box-bottom">
+												<a href="telecomProducts.html">Explore more</a>
+											</div>
+										</div>
 									</div>
-									<div class="box-bottom">
-										<a href="#">Explore more</a>
+									<div class="wow zoomIn col-lg-3 animated">
+										<div class="box">
+											<div class="box-gray aligncenter">
+												<h4 style="height: 30px;">CCTV</h4>
+												<div class="icon">
+													<i class="fa fa-desktop fa-3x"></i>
+												</div>
+												<p>We make the network which connects people.</p>
+
+											</div>
+											<div class="box-bottom">
+												<a href="telecomProducts.html">Explore more</a>
+											</div>
+										</div>
+									</div>
+									<div class="wow zoomIn col-lg-3 animated">
+										<div class="box">
+											<div class="box-gray aligncenter">
+												<h4 style="height: 30px;">Video Conferencing</h4>
+												<div class="icon">
+													<i class="fa fa-desktop fa-3x"></i>
+												</div>
+												<p>We make the network which connects people.</p>
+
+											</div>
+											<div class="box-bottom">
+												<a href="telecomProducts.html">Explore more</a>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="wow zoomIn col-lg-3 animated">
-								<div class="box">
-									<div class="box-gray aligncenter">
-										<h4 style="height:30px;">Lights</h4>
-										<div class="icon">
-											<i class="fa fa-lightbulb-o fa-3x"></i>
-										</div>
-										<p>The future is here, and it's a bright one.</p>
+						</div>
+					</div>
 
+				</div>
+			</div>
+		</section>
+
+		<section id="renewableProducts" style="display: none;"
+			style="background:#f9f9f9">
+			<div class="container">
+				<div class="row">
+					<div class="box">
+						<div class="left-box" style="width: 100%">
+							<h3 style="text-align: center;color:#68A4C4">Renewable Energy Products</h3>
+							<div class="col-lg-12" style="margin-left: 10%;">
+								<div class="row">
+									<div class="wow zoomIn col-lg-3 animated">
+										<div class="box">
+											<div class="box-gray aligncenter">
+												<h4 style="height: 30px;">Solar Products</h4>
+												<div class="icon">
+													<i class="fa fa-pagelines fa-3x"></i>
+												</div>
+												<p>Today's resource for a better tomorrow</p>
+
+											</div>
+											<div class="box-bottom">
+												<a href="telecomProducts.html">Explore more</a>
+											</div>
+										</div>
 									</div>
-									<div class="box-bottom">
-										<a href="lightProducts.html">Explore more</a>
+									<div class="wow zoomIn col-lg-3 animated">
+										<div class="box">
+											<div class="box-gray aligncenter">
+												<h4 style="height: 30px;">Bio-Gas</h4>
+												<div class="icon">
+													<i class="fa fa-pagelines fa-3x"></i>
+												</div>
+												<p>Today's resource for a better tomorrow</p>
+
+											</div>
+											<div class="box-bottom">
+												<a href="telecomProducts.html">Explore more</a>
+											</div>
+										</div>
+									</div>
+									<div class="wow zoomIn col-lg-3 animated">
+										<div class="box">
+											<div class="box-gray aligncenter">
+												<h4 style="height: 30px;">Waste Management</h4>
+												<div class="icon">
+													<i class="fa fa-pagelines fa-3x"></i>
+												</div>
+												<p>Today's resource for a better tomorrow</p>
+
+											</div>
+											<div class="box-bottom">
+												<a href="telecomProducts.html">Explore more</a>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -153,7 +270,6 @@
 				</div>
 			</div>
 		</section>
-
 		<div id="footerwrap">
 			<div class="container">
 				<div class="row">
@@ -173,7 +289,7 @@
 			</div>
 		</div>
 	</div>
-	<a href="index.html" class="scrollup"><i
+	<a href="#" class="scrollup" onClick="resetProducts()" title="Go to Top"><i
 		class="fa fa-angle-up active"></i></a>
 	<!-- javascript
     ================================================== -->
@@ -187,7 +303,24 @@
 	<script src="js/portfolio/jquery.quicksand.js"></script>
 	<script src="js/portfolio/setting.js"></script>
 	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/templatesInclude.js"></script>
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
+	<script>
+		function showSurveillanceProducts() {
+			$("survelenceProduct").attr('display', 'block');
+			document.getElementById('survelenceProduct').style.display = 'block';
+			document.getElementById('renewableProducts').style.display = 'none';
+		}
+
+		function showRenewableProducts() {
+			document.getElementById('survelenceProduct').style.display = 'none';
+			document.getElementById('renewableProducts').style.display = 'block';
+		}
+		function resetProducts() {
+			document.getElementById('survelenceProduct').style.display = 'none';
+			document.getElementById('renewableProducts').style.display = 'none';
+		}
+	</script>
 </body>
 </html>

@@ -20,9 +20,19 @@
 <script>
 	new WOW().init();
 </script>
+<script src="js/jquery.js"></script>
 <link rel="shortcut icon" href="img/kripa_logo.png">
+<script src="js/jquery.js"></script>
 </head>
-<body style="background: img/bg.jpg">
+<body>
+	<div id="spinner" style="display: none;"></div>
+	<script>
+		$("#spinner").fadeIn(50);
+		$( window ).load(function() {
+			$("#spinner").fadeOut(50);	
+		});
+
+	</script>
 	<div id="wrapper">
 		<!-- start header -->
 		<header>
@@ -419,5 +429,5 @@
 		});
 	</script>
 	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
-</body>
+	</body>
 </html>

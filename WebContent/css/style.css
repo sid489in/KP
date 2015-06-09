@@ -25,6 +25,22 @@ body {
 	color: #656565;
 }
 
+ #spinner {
+position: fixed;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 100%;
+z-index: 9999;
+background: url(../img/ajax-loader.gif) 50% 50% no-repeat #fff;
+}
+
+body.handCursor, body.handCursor * {
+	cursor: pointer;
+	cursor: hand;
+	opacity: 1;
+}
+
 a:active {
 	outline: 0;
 }
@@ -34,7 +50,7 @@ a:active {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 500;
 	line-height: 1.1em;
 	color: #333;
@@ -648,18 +664,20 @@ form#commentform textarea {
 
 .item-thumbs .hover-wrap .overlay-img {
 	position: absolute;
-	width: 50%;
+	width: 100%;
 	height: 100%;
-	opacity: 0.80;
+	opacity: 0.70;
 	filter: alpha(opacity = 80);
 	background: #000;
+	margin-left:-10px;
+	margin-top:-10px;
 }
 
 .item-thumbs .hover-wrap .overlay-img-thumb {
 	position: absolute;
 	border-radius: 60px;
-	top: 50%;
-	left: 50%;
+	top: 43%;
+	left: 43%;
 	margin: -16px 0 0 -16px;
 	color: #fff;
 	font-size: 32px;
@@ -2112,17 +2130,16 @@ table.dataTable thead th.sorting_desc:after {
 	color: #696763;
 	padding: 0px;
 	display: block;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    line-height: 40px;
-    outline: 0;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	line-height: 40px;
+	outline: 0;
 }
 
 .social-icons ul li {
 	display: inline-block;
 }
-
 
 .social-icons ul li a i {
 	padding: 11px 15px;
@@ -2147,7 +2164,7 @@ table.dataTable thead th.sorting_desc:after {
 
 .fa-twitter:hover {
 	background: #5BBCEC;
-	background-color:#5BBCEC;
+	background-color: #5BBCEC;
 }
 
 .fa-linkedin:hover {
@@ -2167,13 +2184,13 @@ table.dataTable thead th.sorting_desc:after {
 	padding: 40px 0 30px 0;
 	text-align: center;
 	border-top: 1px solid #e6e6e6;
-	height:100px;
+	height: 100px;
 }
 
 #footerwrap span.copyright {
 	color: #fff;
 	font-size: 16px;
-	margin-left:100px;
+	margin-left: 100px;
 }
 
 #footerwrap span.copyright a {
@@ -2188,7 +2205,7 @@ table.dataTable thead th.sorting_desc:after {
 
 ul.social-buttons {
 	margin: 0;
-	margin-top:-10px;
+	margin-top: -10px;
 }
 
 ul.social-buttons li a {
@@ -2196,11 +2213,11 @@ ul.social-buttons li a {
 	outline: 0;
 	color: #fff;
 	display: block;
-  	width: 40px;
+	width: 40px;
 	height: 40px;
-    border-radius: 100%;
-    line-height: 40px;
-    background-color:#c4c4c4;
+	border-radius: 100%;
+	line-height: 40px;
+	background-color: #c4c4c4;
 }
 
 ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active
@@ -2212,35 +2229,36 @@ ul.social-buttons li a:hover {
 	color: #fff;
 }
 
-#container1{
-	float:left;
-	width:100%;
+#container1 {
+	float: left;
+	width: 100%;
 }
 
-#col1{
-	float:left;
-	width:26%;
-	padding-right:3%;
+#col1 {
+	float: left;
+	width: 26%;
+	padding-right: 3%;
 	text-align: justify;
 }
 
-#col2{
-	float:left;
-	width:26%;
-	padding-right:3%;
+#col2 {
+	float: left;
+	width: 26%;
+	padding-right: 3%;
 	text-align: justify;
 }
 
-#col3{
-	float:left;
-	width:26%;
-	padding-right:2%;
+#col3 {
+	float: left;
+	width: 26%;
+	padding-right: 2%;
 	text-align: justify;
 }
 
-#col4{
-	float:right;
-	width:22%;
-}	
-
-
+#col4 {
+	float: right;
+	width: 22%;
+}
+.fa-3x {
+  color: yellowgreen;
+}

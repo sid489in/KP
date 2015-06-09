@@ -24,8 +24,17 @@
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+<script src="js/jquery.js"></script>
 </head>
 <body>
+	<div id="spinner" style="display: none;"></div>
+	<script>
+		$("#spinner").fadeIn(50);
+		$( window ).load(function() {
+			$("#spinner").fadeOut(50);	
+		});
+
+	</script>
 	<div id="wrapper">
 		<!-- start header -->
 		<header>
@@ -103,104 +112,140 @@
 			<div class="container">
 				<div id="gridArea">
 					<ul id="tiles">
-						<li><a href="lights/ledStreetLight.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img
-								src="img/lights/streetLight.jpg" alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/ledStreetLight.html" title="LED STREET LIGHTS"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img
+								src="img/lights/streetLight.jpg" alt="Sticky" title="LED STREET LIGHTS" />
 							<h4>
 								<a href="#">LED Street Lights</a>
 							</h4>
 							<p>These LED's are high intensity lights ideal for clustered
 								and powered to build LED Based Street Lights.</p></li>
-						<li><a href="lights/ceilingLight.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img
-								src="img/lights/ceilingLight.jpg" alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/ceilingLight.html" title="CEILING LIGHTS"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img
+								src="img/lights/ceilingLight.jpg" alt="Sticky" title="CEILING LIGHTS" />
 							<h4>
 								<a href="#">Ceiling Lights</a>
 							</h4>
 							<p>LED ceiling light utilizes high power LED for practical
 								solution to general overhead room and office lighting.</p></li>
-						<li><a href="lights/rgbFloodLight.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img
-								src="img/lights/rgbFloodLight.jpg" alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/rgbFloodLight.html" title="RGB FLOOD LIGHTS"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img
+								src="img/lights/rgbFloodLight.jpg" alt="Sticky" title="RGB FLOOD LIGHTS" />
 							<h4>
 								<a href="#">RGB Flood Lights</a>
 							</h4>
 							<p>These RGB Flood Lights offer long service life, high
 								energy efficiency and low maintenance cost.</p></li>
-						<li><a href="lights/floodLights.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img
-								src="img/lights/floodLights.jpg" alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/floodLights.html" title="FLOOD LIGHTS"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img
+								src="img/lights/floodLights.jpg" alt="Sticky" title="FLOOD LIGHTS" />
 							<h4>
 								<a href="#">Flood Lights</a>
 							</h4>
 							<p>Flood lights are widely used in factory, landscape, sports
 								stadium; advertise board etc..</p></li>
-						<li><a href="lights/industrialBayLight.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img
-								src="img/lights/bayLight.jpg" alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/industrialBayLight.html" title="INDUSTRIAL BAY LIGHT"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img
+								src="img/lights/bayLight.jpg" alt="Sticky" title="INDUSTRIAL BAY LIGHT" />
 							<h4>
 								<a href="#">Industrial Bay Light</a>
 							</h4>
 							<p>High Bay Light (LED Warehouse Light, LED Industrial Light)
 								are designed to replace traditional H.I.D. (High Intensity
 								Discharge) lamps</p></li>
-						<li><a href="lights/ledDownLight.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img
-								src="img/lights/downLights.jpg" alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/ledDownLight.html" title="DOWN LIGHTS"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img
+								src="img/lights/downLights.jpg" alt="Sticky" title="DOWN LIGHTS" />
 							<h4>
 								<a href="#">LED Down Light</a>
 							</h4>
 							<p>The usage of LED down lighting allows equal distribution
 								of light over interior area, while dissipating almost negligible
 								heat.</p></li>
-						<li><a href="lights/wellGlassLight.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img
-								src="img/lights/wellGlassLight.jpg" alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/wellGlassLight.html" title="WELL GLASS LIGHTS"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img
+								src="img/lights/wellGlassLight.jpg" alt="Sticky" title="WELL GLASS LIGHTS" />
 							<h4>
 								<a href="#">WELL Glass Lights</a>
 							</h4>
 							<p>Our Well glass fittings come in the category of lighting
 								fixtures. These are highly durable and provide long service life
 								even in long run.</p></li>
-						<li><a href="lights/tubeLights.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img
-								src="img/lights/tubeLights.jpg" alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/tubeLights.html" title="TUBE LIGHTS"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img
+								src="img/lights/tubeLights.jpg" alt="Sticky" title="TUBE LIGHTS" />
 							<h4>
 								<a href="#">Tube Lights</a>
 							</h4>
 							<p>LED tube lights are an exciting, and rapidly evolving,
 								replacement for traditional fluorescent tube lights.They offer
 								reduced operating costs.</p></li>
-						<li><a href="lights/ledBulbs.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img src="img/lights/bulb.jpg"
-								alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/ledBulbs.html" title="LEB BULBS"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img src="img/lights/bulb.jpg"
+								alt="Sticky" title="LED BULBS" />
 							<h4>
 								<a href="#">LED Bulbs</a>
 							</h4>
 							<p>LED light bulbs are made by arranging identical light
 								emitting diodes closely to form the shape of a light
 								bulb.Energy-saving light bulbs can be used in indoor and outdoor</p></li>
-						<li><a href="lights/mr16.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img src="img/lights/mr16.jpg"
-								alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/mr16.html" title="MR-16"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img src="img/lights/mr16.jpg"
+								alt="Sticky" title="MR-16" />
 							<h4>
 								<a href="#">MR-16</a>
 							</h4>
 							<p>These LED light MR-16 provide very low energy lighting
 								with extremely long life.Friendly: no mercury or other harmful
 								materials.</p></li>
-						<li><a href="lights/lantern.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img src="img/lights/lantern.jpg"
-								alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/lantern.html" title="LANTERN & READING LAMPS"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img src="img/lights/lantern.jpg"
+								alt="Sticky" title="LANTERN AND READING LAMPS" />
 							<h4>
 								<a href="#">LANTERN & READING LAMPS</a>
 							</h4>
 							<p>The newest in our environment friendly line of products are a
 								must for all homes and offices where electricity supply is
 								inconsistent.</p></li>
-						<li><a href="lights/avaitionLamp.html" title="Sticky"
-							rel="prettyPhoto[gallery1]"><img
-								src="img/lights/avaitionLamp.jpg" alt="Sticky" title="Sticky" /></a>
+						<li class="item-thumbs"><a href="lights/avaitionLamp.html" title="AVAITION LAMPS"
+							class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+								<span class="overlay-img-thumb font-icon-plus"></span></a>
+							<img
+								src="img/lights/avaitionLamp.jpg" alt="Sticky" title="AVAITION LAMPS" />
 							<h4>
 								<a href="#">AVAITION LAMPS</a>
 							</h4>
@@ -265,7 +310,6 @@
 	<!-- javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="js/jquery.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.fancybox.pack.js"></script>

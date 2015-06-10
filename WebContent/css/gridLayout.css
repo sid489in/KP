@@ -5,10 +5,10 @@
 }
 
 .left-box {
-	width: 900px;
+	width: 76%;
 	float: left;
 	padding: 10px;
-	border: 1px solid #eee;
+	border: 1px solid #ddd;
 	background: #FFF;
 }
 
@@ -39,6 +39,17 @@
 }
 
 .grid_1_of_3:first-child {
+	margin-left: 0;
+}
+
+.background_grid {
+	display: block;
+	float: left;
+	margin: 1% 0 1% 1.6%;
+	border: 1px solid #bce8f1;
+}
+
+.background_grid:first-child {
 	margin-left: 0;
 }
 
@@ -78,11 +89,12 @@
 	letter-spacing: -1px;
 	font-size: 1.6em;
 	padding: 0px 0px 10px 0px;
+	text-align: center;
 }
 
 .images_1_of_3  p {
 	font-size: 0.8125em;
-	padding: 14px 0;
+	padding: 5px 0;
 	color: #111;
 	line-height: 1.6em;
 	font-family: verdana, arial, helvetica, helve, sans-serif;
@@ -114,11 +126,11 @@
 /*----right-box----*/
 .right-box {
 	float: right;
-	width: 22.36%;
+	width: 24%;
 	padding: 30px;
-	border: 1px solid #EEE;
+	border: 1px solid #ddd;
 	background: #FFF;
-	padding-bottom:50px;
+	padding-bottom:59px;
 }
 
 .right-box h3 {
@@ -126,6 +138,7 @@
 	color: #613854;
 	text-transform: uppercase;
 	font-size: 1.6em;
+	text-align: center;
 }
 
 .right-box-grid-img {
